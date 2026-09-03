@@ -7,7 +7,7 @@
     "email": "abram.yang@outlook.com",
     "phone": "+86 159-2109-8538",
     "url": "https://gh.abramyang.com/resume",
-    "summary": "Senior Frontend Engineer with 7+ years in React and Mini Program ecosystems. Applies AI-driven workflows to accelerate development cycles and improve engineering architecture. Experienced in canvas-based 2D interaction systems and Three.js-powered 3D rendering development. Collaborates across APAC markets and leads a cross-platform engineering team.",
+    "summary": "Senior Frontend Engineer / Frontend Lead with 7+ years of experience delivering complex web and cross-platform products and contributing to architecture across complex business applications. Experienced in independently owning React.js frontend architecture, technical decisions, engineering systems, real-time applications, SSR, Node.js services, and 0-to-1 product delivery. Hands-on with AI product development, including Dify-based RAG workflows, workflow orchestration, custom AI frontends, and AI-first engineering practices using Figma MCP and OpenAPI-driven tooling. Previously led cross-functional frontend teams and delivered products across APAC markets.",
     "location": {
       "city": "Shanghai",
       "region": "Shanghai",
@@ -34,9 +34,11 @@
       "startDate": "2023-05-01",
       "url": "https://www.trajectry.com",
       "highlights": [
-        "Architected and delivered production-grade WeChat and WeCom Mini Program using Taro, React, Weapp-tailwindcss and TypeScript.",
-        "Designed and integrated AI-driven customer support and multilingual translation services into production systems.",
-        "Served global luxury and premium brands including Christie's, Hermès, Kallista, Messika, Bucherer, Bulgari, etc."
+        "Owned frontend architecture and delivery across complex web and cross-platform products, spanning real-time systems, cross-platform applications, SSR websites, CMS, and AI-enabled experiences.",
+        "Designed frontend architecture for Christie's products including real-time communication, multi-account permissions, cross-platform monorepo structure, reusable component systems, and OpenAPI-based API integration.",
+        "Built and orchestrated Dify-based RAG workflows for a Richemont knowledge application, owning workflow and node logic as well as the custom frontend experience.",
+        "Applied an AI-first development workflow on Kallista, combining Figma MCP and OpenAPI/Orval-generated API definitions to provide structured context for LLM implementation while owning business logic, architecture boundaries, and code review.",
+        "Delivered products for global luxury and premium brands including Christie's, Richemont, Hermès, Kallista, Messika, Bucherer, Bulgari, and Monotype."
       ]
     },
     {
@@ -47,7 +49,7 @@
       "endDate": "2023-02-15",
       "highlights": [
         "Designed and implemented a customizable clothing platform with real-time 2D/3D rendering using React, Fabric.js, and Three.js.",
-        "Led frontend architecture and delivery for DIY clothing application and WeChat Miniprogram, managed agile teams and built CI/CD infrastructure.",
+        "Led frontend architecture and delivery for a DIY clothing application and WeChat Miniprogram, managed agile teams, and built CI/CD infrastructure.",
         "Developed a Node.js headless rendering service to generate print-ready high-resolution output from user designs, enabling offline export without client-side rendering constraints."
       ]
     },
@@ -60,7 +62,7 @@
       "endDate": "2021-09-01",
       "highlights": [
         "Refactored a React Native app into a WebView-based hybrid architecture, enabling a shared codebase across iOS, Android, and H5.",
-        "Led a cross-functional team of 5 engineers (FE, iOS, Android) coordinating sprint planning and technical decisions."
+        "Led a cross-functional team of 5 engineers (FE, iOS, Android), coordinating sprint planning and technical decisions."
       ]
     },
     {
@@ -72,48 +74,61 @@
       "endDate": "2020-11-30",
       "highlights": [
         "Developed responsive campaign websites and minisites for Huawei, Marriott, and automotive brands.",
-        "Collaborated across Singapore, Japan, and India teams in distributed delivery model."
+        "Collaborated across Singapore, Japan, and India teams in a distributed delivery model."
       ]
     }
   ],
   "skills": [
     {
-      "name": "Frontend",
+      "name": "Web & Frontend Architecture",
       "keywords": [
         "React",
         "TypeScript",
+        "Next.js",
+        "Astro",
         "Vue",
-        "TailwindCSS",
-        "Hybrid Architecture",
+        "SSR",
+        "Component Architecture",
+        "Cross-platform Architecture",
         "Mini Program"
       ]
     },
     {
-      "name": "AI-assisted Development",
+      "name": "Engineering & Backend",
       "keywords": [
-        "Claude Code",
-        "GitHub Copilot",
-        "Prompt Engineering",
-        "LLM Workflow Optimization"
+        "Node.js",
+        "WebSocket",
+        "REST APIs",
+        "OpenAPI",
+        "Orval",
+        "pnpm Workspaces",
+        "Monorepo",
+        "CI/CD",
+        "Docker",
+        "Strapi"
       ]
     },
     {
-      "name": "Rendering & Visualization",
+      "name": "AI Engineering",
+      "keywords": [
+        "Dify",
+        "RAG Workflow",
+        "LLM Workflow Orchestration",
+        "AI-first Development",
+        "Figma MCP",
+        "Claude Code",
+        "GitHub Copilot",
+        "Context Engineering"
+      ]
+    },
+    {
+      "name": "Visualization & Complex Interaction",
       "keywords": [
         "Fabric.js",
         "Three.js",
         "WebGL",
+        "Canvas",
         "Interactive Editing Systems"
-      ]
-    },
-    {
-      "name": "Backend & Infrastructure",
-      "keywords": [
-        "Node.js",
-        "REST APIs",
-        "CI/CD",
-        "Docker",
-        "Cloud Deployment"
       ]
     }
   ],
@@ -131,21 +146,21 @@
   "projects": [
     {
       "name": "Christie's WeChat Miniprogram",
-      "description": "Ongoing retainer frontend development for Christie's China WeChat Miniprogram, delivering new features and platform enhancements across release cycles. Tech: Taro, React, TypeScript, Redux, WebSocket, Orval, pnpm workspaces.",
+      "description": "Ongoing frontend architecture and development for Christie's China WeChat Miniprogram, covering complex auction, account, and cross-platform workflows. Tech: Taro, React, WebSocket, Orval, pnpm Workspaces.",
       "highlights": [
-        "Adopted Redux for global state management, establishing a predictable data flow across complex auction and account workflows.",
-        "Designed a WebSocket manager module handling dual concurrent connections (global + local), with automatic reconnection and session recovery to ensure reliability during online auctions.",
-        "Refactored multi-account module to support switching among authorized sub-accounts under an enterprise account, with per-account permission control and isolated state management.",
-        "Built a reusable UI component library inspired by shadcn/ui, keeping components fully owned and customizable per page.",
-        "Restructured the codebase into a pnpm workspaces monorepo to support a LINE LIFF page alongside the WeChat Miniprogram, extracting shared components, utilities, and types into independent packages reused across both platforms.",
-        "Introduced Orval to auto-generate fully-typed API client code from the backend's OpenAPI spec, eliminating manual type maintenance and keeping the client in sync with API changes across release cycles."
+        "Owned frontend state organization and its ongoing evolution across complex auction and account workflows, progressively separating page logic into clearer hooks and business modules.",
+        "Designed a WebSocket manager handling dual concurrent connections (global + local), automatic reconnection, and session recovery for reliable online auction interactions.",
+        "Refactored the multi-account module to support authorized sub-account switching with per-account permission control and isolated state.",
+        "Built a reusable UI component system inspired by shadcn/ui, keeping component source fully owned and customizable for product requirements.",
+        "Restructured the codebase into a pnpm Workspaces monorepo supporting both WeChat Miniprogram and LINE LIFF, with shared components, utilities, and types.",
+        "Introduced Orval to generate API clients from OpenAPI specifications, reducing manual interface definition maintenance and keeping frontend and backend API structures aligned."
       ],
       "keywords": [
         "Taro",
         "React",
-        "TypeScript",
-        "WeChat Miniprogram",
-        "Orval"
+        "WebSocket",
+        "Orval",
+        "Monorepo"
       ],
       "startDate": "2023-05-01",
       "roles": [
@@ -155,38 +170,82 @@
       "type": "application"
     },
     {
-      "name": "Luxury Brand Miniprograms",
-      "description": "Delivered WeChat Miniprogram projects for Hermès, Kallista, Messika, and Bucherer, covering after-sales service, e-commerce, appointment booking, and product showcase. Tech: Taro, React, TypeScript, WeChat Miniprogram.",
+      "name": "Shantec Website (Independent Project)",
+      "description": "Independently architected and delivered a website from 0 to 1, applying experience gained from previous CMS projects. Tech: Next.js, Strapi, Tailwind CSS 4, Monorepo.",
       "highlights": [
-        "Built a full e-commerce flow with persisted cart state, WeChat Pay integration, and multi-step (shouqianba) checkout",
-        "Implemented real-time in-app chat via WebSocket with message queuing, delivery tracking, and automatic reconnection.",
-        "Integrated WeChat Map with geo-based store search, custom markers, and POI filtering across multiple miniprograms."
+        "Owned the project end to end, including architecture, frontend implementation, Strapi CMS integration, and delivery.",
+        "Extended CMS experience gained from the Monotype project and independently applied it in a Strapi-based solution.",
+        "Structured the Web and CMS codebase as a monorepo and built the frontend with Next.js and Tailwind CSS 4."
       ],
       "keywords": [
-        "Taro",
-        "React",
-        "TypeScript",
-        "WeChat Miniprogram",
-        "Orval"
+        "Next.js",
+        "Strapi",
+        "Tailwind CSS 4",
+        "Monorepo",
+        "CMS"
+      ],
+      "roles": [
+        "Independent Developer"
+      ],
+      "entity": "Shantec",
+      "type": "website"
+    },
+    {
+      "name": "Richemont AI Knowledge Workflow",
+      "description": "AI-assisted research and knowledge retrieval workflow built on Richemont monthly reports using Dify knowledge base and workflow capabilities. Tech: Dify, RAG, LLM Workflow, Custom Frontend.",
+      "highlights": [
+        "Worked with monthly report content indexed in a Dify knowledge base so relevant knowledge chunks could be retrieved as context for user queries.",
+        "Owned workflow orchestration and node logic across task execution, conditional decisions, and workflow progression.",
+        "Built the custom frontend experience that exposed the multi-stage AI workflow as an interactive product."
+      ],
+      "keywords": [
+        "Dify",
+        "RAG",
+        "LLM",
+        "Workflow Orchestration",
+        "AI Product"
       ],
       "startDate": "2023-05-01",
       "roles": [
         "Senior Frontend Engineer"
       ],
-      "entity": "Trajectry",
+      "entity": "Richemont",
+      "type": "application"
+    },
+    {
+      "name": "Kallista Miniprogram — AI-first Development",
+      "description": "Production Miniprogram delivered with an AI-first engineering workflow designed to make implementation and ongoing maintenance highly LLM-friendly. Tech: React, Taro, Figma MCP, OpenAPI, Orval, LLM Coding.",
+      "highlights": [
+        "Decomposed Figma designs into explicit component boundaries and used Figma MCP to provide structured design context for implementation.",
+        "Used Orval to generate API clients and interface types from backend OpenAPI specifications, giving the LLM machine-readable API definitions instead of relying on guessed endpoints or data structures.",
+        "Focused human effort on business rules, architecture and component boundaries, edge cases, and code review while delegating substantial CRUD and repetitive implementation to LLM coding tools.",
+        "Explored an engineering model better suited to long-term AI maintenance, using design context, API definitions, and code boundaries as explicit constraints to reduce uncertainty during implementation."
+      ],
+      "keywords": [
+        "React",
+        "Taro",
+        "Figma MCP",
+        "OpenAPI",
+        "Orval",
+        "AI-first Development"
+      ],
+      "startDate": "2023-05-01",
+      "roles": [
+        "Senior Frontend Engineer"
+      ],
+      "entity": "Kallista",
       "type": "application"
     },
     {
       "name": "Monotype Asia Website",
-      "description": "Built and localized the Monotype Asia website for China Mainland, Taiwan, and Korea. Tech: Astro, TypeScript, Tailwind, Strapi, SSR, i18n, Node.js.",
+      "description": "Built and localized the Monotype Asia website for China Mainland, Taiwan, and Korea in collaboration with a backend engineer. Tech: Astro, Tailwind, Strapi, SSR, i18n, Node.js.",
       "highlights": [
-        "Architected a single Astro SSR codebase deployable across China Mainland, Taiwan, and Korea markets, with region-specific locale, routing, and configuration driven by build-time environment variables.",
-        "Integrated Strapi as a headless CMS to serve region-specific content, with dynamic sitemap generation and full SSR data fetching per market.",
-        "Maintained multi-environment deployment pipeline (dev / staging / UAT / prod) across three regional sites, with CI/CD triggered per region via branch-based merge strategies."
+        "Architected the Web-side Astro SSR solution for deployment across China Mainland, Taiwan, and Korea, with region-specific locale, routing, and configuration.",
+        "Collaborated with the backend engineer responsible for the Strapi CMS layer to integrate content, while primarily owning the Web-side solution and implementation.",
+        "Worked on multi-region and multi-environment delivery, gaining CMS experience that was later applied independently in the Shantec project."
       ],
       "keywords": [
         "Astro",
-        "TypeScript",
         "Tailwind",
         "Strapi",
         "SSR",
@@ -251,7 +310,7 @@
       "description": "Developed the official marketing website for DS Automobile China. Tech: JavaScript, CSS Animation, Baidu Map SDK.",
       "highlights": [
         "Built a high-fidelity animated landing page with scroll-driven and entrance animations using CSS and JavaScript.",
-        "Integrated Baidu Map SDK with custom markers, cluster rendering, and fuzzy search for a nationwide dealer."
+        "Integrated Baidu Map SDK with custom markers, cluster rendering, and fuzzy search for a nationwide dealer network."
       ],
       "keywords": [
         "JavaScript",
@@ -316,7 +375,7 @@
       "description": "Adapted Marriott's global website for the Chinese market, replacing unsupported third-party services and ensuring feature parity. Tech: JavaScript, Baidu Map SDK.",
       "highlights": [
         "Re-implemented Google Maps-based hotel locator with Baidu Map SDK, preserving search, filtering, and marker functionality for CN users.",
-        "Collaborated with the India-based development team"
+        "Collaborated with the India-based development team."
       ],
       "keywords": [
         "Baidu Map",
@@ -347,23 +406,12 @@
   ],
   "interests": [
     {
-      "name": "Engineering",
-      "keywords": [
-        "System Design",
-        "Frontend Architecture",
-        "Developer Productivity",
-        "Innovations",
-        "Experimentation"
-      ]
-    },
-    {
-      "name": "Hobbies",
       "keywords": [
         "Traveling",
         "Fitness",
         "Music",
         "Photography",
-        "Calligraphy"
+        "Cycling"
       ]
     }
   ],
@@ -371,6 +419,6 @@
   "meta": {
     "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
     "version": "v1.0.0",
-    "lastModified": "2026-02-28T10:57:31"
+    "lastModified": "2026-09-03T06:05:25"
   }
 }
