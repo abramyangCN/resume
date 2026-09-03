@@ -1,0 +1,75 @@
+name: Preview Resume Branch
+
+on:
+  push:
+    branches-ignore:
+      - main
+      - gh-pages
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  models: read
+
+concurrency:
+  group: resume-preview-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-preview:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v3
+        with:
+          version: latest
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build English resume from source
+        run: node build.js
+
+      - name: Generate Chinese resume
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/translate.js
+
+      - name: Export English and Chinese HTML
+        run: |
+          pnpm exec resume export resume.html
+
+          cp resume.json resume.json.bak
+          cp resume.zh.json resume.json
+          pnpm exec resume export resume.zh.html
+          mv resume.json.bak resume.json
+
+          mkdir -p dist/zh
+          cp resume.html dist/index.html
+          cp resume.zh.html dist/zh/index.html
+
+          node scripts/inject-lang-switcher.js dist/index.html en zh ./zh/
+          node scripts/inject-lang-switcher.js dist/zh/index.html zh en ../
+
+      - name: Resolve preview path
+        id: preview
+        shell: bash
+        run: |
+          SLUG=$(printf '%s' "${GITHUB_REF_NAME}" | sed 's#[^A-Za-z0-9._-]#-#g')
+          echo "slug=${SLUG}" >> "$GITHUB_OUTPUT"
+          echo "Preview path: preview/${SLUG}"
+
+      - name: Deploy branch preview
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: dist
+          target-folder: preview/${{ steps.preview.outputs.slug }}
+          clean: false
