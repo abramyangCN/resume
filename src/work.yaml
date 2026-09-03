@@ -4,9 +4,11 @@
   startDate: "2023-05-01"
   url: "https://www.trajectry.com"
   highlights:
-    - Architected and delivered production-grade WeChat and WeCom Mini Program using Taro, React, Weapp-tailwindcss and TypeScript.
-    - Designed and integrated AI-driven customer support and multilingual translation services into production systems.
-    - Served global luxury and premium brands including Christie's, Hermès, Kallista, Messika, Bucherer, Bulgari, etc.
+    - "Owned frontend architecture and delivery across complex React and TypeScript products, spanning real-time systems, cross-platform applications, SSR websites, headless CMS, and AI-enabled experiences."
+    - "Designed frontend architecture for Christie's products including real-time communication, multi-account permissions, cross-platform monorepo structure, reusable component systems, and type-safe API integration."
+    - "Built and orchestrated Dify-based RAG workflows for a Richemont knowledge application, owning workflow and node logic as well as the custom frontend experience."
+    - "Applied an AI-first development workflow on Kallista, combining Figma MCP and OpenAPI/Orval-generated contracts to provide structured context for LLM implementation while owning business logic, architecture boundaries, and review."
+    - "Delivered products for global luxury and premium brands including Christie's, Richemont, Hermès, Kallista, Messika, Bucherer, Bulgari, and Monotype."
 
 - name: Shanghai RJY Information Technology Co., Ltd
   location: "Shanghai, China"
@@ -35,6 +37,5 @@
   startDate: "2019-04-01"
   endDate: "2020-11-30"
   highlights:
-    - "Developed responsive campaign websites and minisites for Huawei, Marriott,
-      and automotive brands."
+    - "Developed responsive campaign websites and minisites for Huawei, Marriott, and automotive brands."
     - "Collaborated across Singapore, Japan, and India teams in distributed delivery model."
