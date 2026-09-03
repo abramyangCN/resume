@@ -9,7 +9,6 @@ on:
 
 permissions:
   contents: write
-  models: read
 
 concurrency:
   group: resume-preview-${{ github.ref }}
@@ -34,13 +33,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Build English resume from source
+      - name: Build English and Chinese resumes from source
         run: node build.js
-
-      - name: Generate Chinese resume
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: node scripts/translate.js
 
       - name: Export English and Chinese HTML
         run: |
