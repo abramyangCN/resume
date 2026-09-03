@@ -39,27 +39,29 @@ jobs:
       - name: Export English and Chinese HTML
         run: |
           pnpm exec resume export resume.html
-
           cp resume.json resume.json.bak
           cp resume.zh.json resume.json
           pnpm exec resume export resume.zh.html
           mv resume.json.bak resume.json
-
           mkdir -p dist/zh
           cp resume.html dist/index.html
           cp resume.zh.html dist/zh/index.html
 
-      - name: Inject A4 print styles
+      - name: Generate Typst sources
         run: |
-          node scripts/inject-print-styles.js resume.html
-          node scripts/inject-print-styles.js resume.zh.html
+          mkdir -p print artifacts
+          node scripts/generate-typst.js resume.json print/resume.en.typ en
+          node scripts/generate-typst.js resume.zh.json print/resume.zh.typ zh
 
-      - name: Generate English and Chinese PDFs
+      - name: Compile delivery PDFs
+        uses: typst-community/setup-typst@v4
+        with:
+          typst-version: latest
+
+      - name: Build English and Chinese PDFs
         run: |
-          mkdir -p artifacts
-          pnpm dlx playwright install --with-deps chromium
-          pnpm dlx playwright pdf --paper-format A4 "file://${PWD}/resume.html" artifacts/resume.en.pdf
-          pnpm dlx playwright pdf --paper-format A4 "file://${PWD}/resume.zh.html" artifacts/resume.zh.pdf
+          typst compile print/resume.en.typ artifacts/resume.en.pdf
+          typst compile print/resume.zh.typ artifacts/resume.zh.pdf
           cp artifacts/resume.en.pdf dist/resume.pdf
           cp artifacts/resume.zh.pdf dist/zh/resume.pdf
 
