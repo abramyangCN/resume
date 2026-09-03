@@ -1,0 +1,29 @@
+education:
+  - institution: 上海电机学院
+    url: "https://www.sdju.edu.cn"
+    area: 电子工程
+    studyType: 学士
+    startDate: "2015-09-01"
+    endDate: "2019-06-01"
+
+certificates:
+  - title: 大学英语六级（CET-6）
+    date: "2019-06-01"
+    awarder: 教育部
+
+  - title: Web Design — CITT Level 3
+    date: "2017-06-01"
+    awarder: China International Talent Training (CITT)
+
+languages:
+  - language: 普通话
+    fluency: 母语
+  - language: 英语
+    fluency: 专业工作能力
+
+interests:
+  - keywords: [旅行, 健身, 音乐, 摄影, 骑行]
+
+volunteer: []
+publications: []
+references: []

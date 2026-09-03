@@ -1,0 +1,102 @@
+name: Preview Resume Branch
+
+on:
+  push:
+    branches-ignore:
+      - main
+      - gh-pages
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: resume-preview-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-preview:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Install CJK fonts
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fonts-noto-cjk
+          fc-cache -f -v
+
+      - name: Build English and Chinese resumes from source
+        run: node build.js
+
+      - name: Export English and Chinese HTML
+        run: |
+          pnpm exec resume export resume.html
+          cp resume.json resume.json.bak
+          cp resume.zh.json resume.json
+          pnpm exec resume export resume.zh.html
+          mv resume.json.bak resume.json
+          mkdir -p dist/zh
+          cp resume.html dist/index.html
+          cp resume.zh.html dist/zh/index.html
+
+      - name: Generate Typst sources
+        run: |
+          mkdir -p print artifacts
+          node scripts/generate-typst.js resume.json print/resume.en.typ en
+          node scripts/generate-typst.js resume.zh.json print/resume.zh.typ zh
+
+      - name: Compile delivery PDFs
+        uses: typst-community/setup-typst@v4
+        with:
+          typst-version: latest
+
+      - name: Build English and Chinese PDFs
+        run: |
+          typst fonts | grep -E "Noto Sans CJK SC|Noto Sans" || true
+          typst compile print/resume.en.typ artifacts/resume.en.pdf
+          typst compile print/resume.zh.typ artifacts/resume.zh.pdf
+          cp artifacts/resume.en.pdf dist/resume.pdf
+          cp artifacts/resume.zh.pdf dist/zh/resume.pdf
+
+      - name: Inject web controls
+        run: |
+          node scripts/inject-lang-switcher.js dist/index.html en zh ./zh/ ./resume.pdf
+          node scripts/inject-lang-switcher.js dist/zh/index.html zh en ../ ./resume.pdf
+
+      - name: Resolve preview path
+        id: preview
+        shell: bash
+        run: |
+          SLUG=$(printf '%s' "${GITHUB_REF_NAME}" | sed 's#[^A-Za-z0-9._-]#-#g')
+          echo "slug=${SLUG}" >> "$GITHUB_OUTPUT"
+          echo "Preview path: preview/${SLUG}"
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: resume-pdf-${{ steps.preview.outputs.slug }}
+          path: artifacts/*.pdf
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Deploy branch preview
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: dist
+          target-folder: preview/${{ steps.preview.outputs.slug }}
+          clean: false

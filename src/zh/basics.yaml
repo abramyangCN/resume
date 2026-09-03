@@ -1,0 +1,23 @@
+name: Abraham Yang 杨杨
+label: "高级前端工程师 / 前端负责人"
+picture: "https://avatars.githubusercontent.com/u/19504192?v=4"
+email: abram.yang@outlook.com
+phone: "+86 159-2109-8538"
+url: "https://gh.abramyang.com/resume"
+summary: >-
+  高级前端工程师 / 前端负责人，拥有7年以上复杂Web与跨平台产品研发经验，长期参与复杂业务系统的架构设计与产品交付。
+  具备独立负责React.js前端架构、技术决策、工程体系、实时应用、SSR、Node.js服务以及0到1产品交付的经验。
+  具有实际AI产品落地经验，包括基于Dify的RAG工作流、Workflow编排、自定义AI前端，以及结合Figma MCP和OpenAPI工具链的AI-first工程实践。
+  曾带领跨职能前端团队，并与亚太多个市场协作完成产品交付。
+location:
+  city: 上海
+  region: 上海
+  countryCode: CN
+
+profiles:
+  - network: LinkedIn
+    username: abramyang
+    url: "https://www.linkedin.com/in/abramyang"
+  - network: Github
+    username: abramyangCN
+    url: "https://www.github.com/abramyangCN"

@@ -8,7 +8,6 @@ on:
 permissions:
   contents: write
   issues: write
-  models: read
 
 jobs:
   build-and-deploy:
@@ -19,11 +18,11 @@ jobs:
 
       - uses: pnpm/action-setup@v3
         with:
-          version: latest
+          version: 10
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: pnpm
 
       - name: Install dependencies
@@ -34,23 +33,23 @@ jobs:
         run: |
           if git diff --quiet HEAD^ HEAD -- src/ scripts/; then
             echo "changed=false" >> $GITHUB_OUTPUT
-            echo "src/ and scripts/ unchanged, skipping build and translation"
+            echo "src/ and scripts/ unchanged, skipping resume rebuild"
           else
             echo "changed=true" >> $GITHUB_OUTPUT
-            echo "src/ or scripts/ changed, will rebuild and translate"
+            echo "src/ or scripts/ changed, rebuilding resumes"
           fi
 
-      - name: Build resume.json from YAML sources
+      - name: Build English and Chinese resumes from YAML sources
         if: steps.check_src.outputs.changed == 'true'
         run: node build.js
 
-      - name: Commit updated resume.json
+      - name: Commit updated resume files
         if: steps.check_src.outputs.changed == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add resume.json
-          git diff --staged --quiet || git commit -m "chore: update resume.json [skip ci]"
+          git add resume.json resume.zh.json
+          git diff --staged --quiet || git commit -m "chore: update generated resumes [skip ci]"
           git push origin HEAD
 
       - name: Update GitHub Gist
@@ -70,37 +69,36 @@ jobs:
           git diff --staged --quiet || git commit -m "chore: update README [skip ci]"
           git push origin HEAD
 
-      - name: Translate resume to Chinese
-        if: steps.check_src.outputs.changed == 'true'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: node scripts/translate.js
-
-      - name: Commit translated resume
-        if: steps.check_src.outputs.changed == 'true'
-        run: |
-          git add resume.zh.json
-          git diff --staged --quiet || git commit -m "chore: update resume.zh.json [skip ci]"
-          git push origin HEAD
-
       - name: Export resume to HTML
         run: |
-          REPO_NAME="${GITHUB_REPOSITORY##*/}"
-          # Export English version
           pnpm exec resume export resume.html
-          # Export Chinese version
           cp resume.json resume.json.bak
           cp resume.zh.json resume.json
           pnpm exec resume export resume.zh.html
-          cp resume.json.bak resume.json
-          rm resume.json.bak
-          # Arrange into dist/
+          mv resume.json.bak resume.json
           mkdir -p dist/zh
           cp resume.html dist/index.html
           cp resume.zh.html dist/zh/index.html
-          # Inject language switcher buttons
-          node scripts/inject-lang-switcher.js dist/index.html en zh /${REPO_NAME}/zh/
-          node scripts/inject-lang-switcher.js dist/zh/index.html zh en /${REPO_NAME}/
+
+      - name: Inject A4 print styles
+        run: |
+          node scripts/inject-print-styles.js resume.html
+          node scripts/inject-print-styles.js resume.zh.html
+
+      - name: Generate deployable PDFs
+        run: |
+          mkdir -p artifacts
+          pnpm dlx playwright install --with-deps chromium
+          pnpm dlx playwright pdf --paper-format A4 "file://${PWD}/resume.html" artifacts/resume.en.pdf
+          pnpm dlx playwright pdf --paper-format A4 "file://${PWD}/resume.zh.html" artifacts/resume.zh.pdf
+          cp artifacts/resume.en.pdf dist/resume.pdf
+          cp artifacts/resume.zh.pdf dist/zh/resume.pdf
+
+      - name: Inject web controls
+        run: |
+          REPO_NAME="${GITHUB_REPOSITORY##*/}"
+          node scripts/inject-lang-switcher.js dist/index.html en zh /${REPO_NAME}/zh/ /${REPO_NAME}/resume.pdf
+          node scripts/inject-lang-switcher.js dist/zh/index.html zh en /${REPO_NAME}/ /${REPO_NAME}/zh/resume.pdf
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4

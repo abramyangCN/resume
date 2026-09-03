@@ -1,0 +1,41 @@
+- name: "Trajectry (前身为 EY Fabernovel China)"
+  location: "上海，中国"
+  position: 高级前端工程师
+  startDate: "2023-05-01"
+  url: "https://www.trajectry.com"
+  highlights:
+    - "负责多个复杂Web与跨平台产品的前端架构与交付，覆盖实时系统、跨平台应用、SSR网站、CMS和AI产品。"
+    - "为Christie's产品设计实时通信、多账户权限、跨平台Monorepo、可复用组件体系以及基于OpenAPI的接口集成。"
+    - "基于Dify为Richemont知识应用搭建并编排RAG工作流，负责Workflow和节点逻辑以及自定义前端体验。"
+    - "在Kallista项目中实践AI-first开发流程，结合Figma MCP与OpenAPI/Orval生成的接口契约为LLM提供结构化上下文，并负责业务逻辑、架构边界和代码Review。"
+    - "服务全球奢侈品及高端品牌，包括Christie's、Richemont、Hermès、Kallista、Messika、Bucherer、Bulgari和Monotype等。"
+
+- name: 上海瑞杰印信息科技有限公司
+  location: "上海，中国"
+  position: 前端负责人
+  startDate: "2021-09-01"
+  endDate: "2023-02-15"
+  highlights:
+    - "使用React、Fabric.js和Three.js设计并实现可定制服装平台，支持实时2D/3D渲染。"
+    - "负责DIY服装应用和微信小程序的前端架构与交付，管理敏捷团队并建设CI/CD基础设施。"
+    - "开发Node.js无头渲染服务，从用户设计生成可打印的高分辨率输出，摆脱客户端渲染限制。"
+
+- name: 上海孚盟软件有限公司
+  location: "上海，中国"
+  position: 高级前端工程师
+  url: "https://www.fumasoft.com"
+  startDate: "2020-12-01"
+  endDate: "2021-09-01"
+  highlights:
+    - "将React Native应用重构为基于WebView的混合架构，实现iOS、Android和H5共享代码库。"
+    - "带领由5名工程师（前端、iOS、Android）组成的跨职能团队，协调Sprint计划和技术决策。"
+
+- name: Publicis Sapient
+  location: "上海，中国"
+  position: 前端工程师
+  url: "https://www.publicisgroupe.com"
+  startDate: "2019-04-01"
+  endDate: "2020-11-30"
+  highlights:
+    - "为Huawei、Marriott及汽车品牌开发响应式活动网站和Mini Site。"
+    - "在分布式交付模式下与新加坡、日本和印度团队协作。"
