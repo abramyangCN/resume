@@ -14,8 +14,11 @@ const selected = ['Christie', 'Shantec', 'Richemont', 'Kallista', 'Monotype', 'T
 const projects = (r.projects || []).filter(p => selected.some(k => p.name.includes(k))).slice(0,6);
 const skills = r.skills || [];
 const b = r.basics || {};
+const fonts = zh
+  ? '("Noto Sans CJK SC", "Noto Sans", "Arial")'
+  : '("Noto Sans", "Noto Sans CJK SC", "Arial")';
 let t = `#set page(paper: "a4", margin: (x: 13mm, top: 12mm, bottom: 13mm))
-#set text(size: 9.2pt, font: ("Noto Sans", "Noto Sans CJK SC", "Arial"), fill: rgb("#202124"))
+#set text(size: 9.2pt, font: ${fonts}, fill: rgb("#202124"))
 #set par(leading: 0.55em, justify: false)
 #set list(indent: 1.1em, body-indent: .45em, spacing: .18em)
 #let accent = rgb("#1f4e79")
