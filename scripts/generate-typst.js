@@ -46,25 +46,13 @@ let t = `#set page(paper: "a4", margin: (x: 13mm, top: 12mm, bottom: 13mm))
 ]
 `;
 
-if (b.summary) {
-  t += heading(zh ? '👤 个人简介' : '👤 SUMMARY') + esc(b.summary) + '\n';
-}
-
+if (b.summary) t += heading(zh ? '👤 个人简介' : '👤 SUMMARY') + esc(b.summary) + '\n';
 t += heading(zh ? '💼 工作经历' : '💼 EXPERIENCE');
-for (const w of (r.work || [])) {
-  t += `#block(breakable: false)[\n#role[${esc(w.position)}][${esc(w.name)}][${esc(range(w))}]\n${bullets(w.highlights)}\n]\n#v(${zh ? '7pt' : '5pt'})\n`;
-}
-
+for (const w of (r.work || [])) t += `#block(breakable: false)[\n#role[${esc(w.position)}][${esc(w.name)}][${esc(range(w))}]\n${bullets(w.highlights)}\n]\n#v(${zh ? '7pt' : '5pt'})\n`;
 t += heading(zh ? '🚀 精选项目' : '🚀 SELECTED PROJECTS');
-for (const p of projects) {
-  t += `#block(breakable: false)[\n*${esc(p.name)}*\n${esc(p.description || '')}\n${bullets((p.highlights || []).slice(0, 3))}\n]\n#v(${zh ? '7pt' : '5pt'})\n`;
-}
-
+for (const p of projects) t += `#block(breakable: false)[\n*${esc(p.name)}*\n${esc(p.description || '')}\n${bullets((p.highlights || []).slice(0, 3))}\n]\n#v(${zh ? '7pt' : '5pt'})\n`;
 t += heading(zh ? '🛠 技能' : '🛠 SKILLS');
-for (const s of skills) {
-  t += `#block[\n*${esc(s.name)}*\n${esc((s.keywords || []).join(' · '))}\n]\n#v(${zh ? '5pt' : '3pt'})\n`;
-}
-
+for (const s of skills) t += `#block(breakable: false)[\n*${esc(s.name)}*#linebreak()\n#v(1.5pt)\n${esc((s.keywords || []).join(' · '))}\n]\n#v(${zh ? '5pt' : '3pt'})\n`;
 if (interests.length) {
   t += heading(zh ? '🚴 爱好' : '🚴 INTERESTS');
   for (const i of interests) {
@@ -72,13 +60,9 @@ if (interests.length) {
     t += `${label}${esc((i.keywords || []).join(' · '))}\n#v(${zh ? '4pt' : '2.5pt'})\n`;
   }
 }
-
 if (r.education?.length) {
   t += heading(zh ? '🎓 教育经历' : '🎓 EDUCATION');
-  for (const e of r.education) {
-    t += `#block(breakable: false)[*${esc(e.institution)}* · ${esc(e.studyType)} ${esc(e.area)}  #h(1fr) ${esc(range(e))}]\n`;
-  }
+  for (const e of r.education) t += `#block(breakable: false)[*${esc(e.institution)}* · ${esc(e.studyType)} ${esc(e.area)}  #h(1fr) ${esc(range(e))}]\n`;
 }
-
 fs.writeFileSync(output, t);
 console.log(`Generated ${output}`);
