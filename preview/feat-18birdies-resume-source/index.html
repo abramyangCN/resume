@@ -1126,23 +1126,38 @@ body {
   s.parentNode.insertBefore(wf, s);
 })();</script>
 <style>
-  #lang-switcher {
+  #resume-controls {
     position: fixed;
     bottom: 24px;
     left: 24px;
     z-index: 9999;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  .resume-control {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     background: #333;
-    color: #fff;
+    color: #fff !important;
     border: none;
     border-radius: 20px;
     padding: 8px 16px;
     font-size: 13px;
+    line-height: 1;
     cursor: pointer;
-    text-decoration: none;
+    text-decoration: none !important;
     box-shadow: 0 2px 8px rgba(0,0,0,0.3);
     transition: background 0.2s;
   }
-  #lang-switcher:hover { background: #555; }
+  .resume-control:hover { background: #555; }
+  @media print {
+    #resume-controls { display: none !important; }
+  }
 </style>
-<a id="lang-switcher" href="./zh/">中文</a>
+<div id="resume-controls">
+  <a id="lang-switcher" class="resume-control" href="./zh/">中文</a>
+  <a id="pdf-download" class="resume-control" href="./resume.pdf" download>Download PDF</a>
+</div>
 </body></html>
