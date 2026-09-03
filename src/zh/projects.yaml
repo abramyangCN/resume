@@ -1,15 +1,15 @@
 - name: "Christie's 微信小程序"
   description: >-
     持续负责Christie's中国微信小程序的前端架构与开发，覆盖复杂拍卖、账户及跨平台业务流程。
-    技术：Taro、React、TypeScript、Redux、WebSocket、Orval、pnpm Workspaces。
+    技术：Taro、React、TypeScript、WebSocket、Orval、pnpm Workspaces。
   highlights:
-    - "使用Redux建立复杂拍卖和账户流程中的可预测全局状态管理。"
+    - "负责复杂拍卖与账户业务的前端状态组织和持续演进，并逐步将页面逻辑拆分为更清晰的Hooks与业务模块。"
     - "设计WebSocket Manager，同时处理Global与Local双连接，并实现自动重连和会话恢复，保障在线拍卖实时交互稳定性。"
     - "重构多账户模块，支持授权子账户切换、账户级权限控制和状态隔离。"
     - "构建受shadcn/ui启发的可复用UI组件体系，保持组件源码完全可控并可按产品需求定制。"
     - "将代码库重构为pnpm Workspaces Monorepo，同时支持微信小程序与LINE LIFF，并抽离共享组件、工具函数和类型。"
-    - "引入Orval基于OpenAPI自动生成完整类型的API Client，减少手工维护接口契约的成本，并保持前后端类型同步。"
-  keywords: [Taro, React, TypeScript, Redux, WebSocket, Orval, Monorepo]
+    - "引入Orval基于OpenAPI自动生成API Client，减少手工维护接口定义的成本，并保持前后端接口结构同步。"
+  keywords: [Taro, React, WebSocket, Orval, Monorepo]
   startDate: "2023-05-01"
   roles: [高级前端工程师]
   entity: "Christie's"
@@ -17,13 +17,13 @@
 
 - name: Shantec 官网（独立项目）
   description: >-
-    独立从0到1完成网站架构与交付，将此前Headless CMS项目中积累的经验应用到完整Web项目中。
-    技术：Next.js、TypeScript、Strapi、Tailwind CSS 4、Monorepo。
+    独立从0到1完成网站架构与交付，将此前CMS项目中积累的经验应用到完整Web项目中。
+    技术：Next.js、Strapi、Tailwind CSS 4、Monorepo。
   highlights:
     - "独立负责项目端到端交付，包括架构设计、前端实现、Strapi CMS集成与上线。"
-    - "将在Monotype项目中积累的Headless CMS经验进一步学习并独立落地为基于Strapi的解决方案。"
+    - "将在Monotype项目中积累的CMS经验进一步学习并独立落地为基于Strapi的解决方案。"
     - "使用Monorepo组织Web与CMS工程，并基于Next.js和Tailwind CSS 4完成前端实现。"
-  keywords: [Next.js, TypeScript, Strapi, Tailwind CSS 4, Monorepo, Headless CMS]
+  keywords: [Next.js, Strapi, Tailwind CSS 4, Monorepo, CMS]
   roles: [独立开发者]
   entity: Shantec
   type: website
@@ -45,13 +45,13 @@
 - name: Kallista 小程序 — AI-first Development
   description: >-
     采用AI-first工程流程交付生产级小程序，目标是让主要实现与后续维护尽可能由LLM完成，同时通过工程上下文与边界提升确定性。
-    技术：React、TypeScript、Taro、Figma MCP、OpenAPI、Orval、LLM Coding。
+    技术：React、Taro、Figma MCP、OpenAPI、Orval、LLM Coding。
   highlights:
     - "将Figma设计稿拆分为明确的组件边界，并通过Figma MCP提供结构化设计上下文。"
-    - "使用Orval基于后端OpenAPI规范生成API Client与TypeScript类型，使LLM直接获得机器可读的接口契约，而非猜测Endpoint或数据结构。"
+    - "使用Orval基于后端OpenAPI规范生成API Client与接口类型，使LLM直接获得机器可读的接口定义，而不是猜测接口地址或数据结构。"
     - "人工主要负责业务规则、架构与组件边界、异常场景和代码Review，将大量CRUD与重复性实现交由LLM完成。"
-    - "探索AI可维护的工程模式，让设计上下文、类型、API Contract和代码边界成为Coding Agent的确定性Guardrails。"
-  keywords: [React, TypeScript, Taro, Figma MCP, OpenAPI, Orval, AI-first Development]
+    - "探索更适合AI长期维护的工程模式，通过设计上下文、接口定义和代码边界为Coding Agent提供明确约束，减少实现过程中的不确定性。"
+  keywords: [React, Taro, Figma MCP, OpenAPI, Orval, AI-first Development]
   startDate: "2023-05-01"
   roles: [高级前端工程师]
   entity: Kallista
@@ -60,12 +60,12 @@
 - name: Monotype 亚洲网站
   description: >-
     与后端工程师协作，为中国大陆、台湾和韩国构建并本地化Monotype亚洲网站。
-    技术：Astro、TypeScript、Tailwind、Strapi、SSR、i18n、Node.js。
+    技术：Astro、Tailwind、Strapi、SSR、i18n、Node.js。
   highlights:
     - "负责Web侧Astro SSR方案设计，使单一代码库可部署至中国大陆、台湾和韩国，并支持区域化语言、路由和配置。"
-    - "与负责Strapi CMS层的后端工程师协作完成内容集成，明确自身主要负责Web侧而非独立负责全部后端实现。"
-    - "参与多区域、多环境交付，并积累Headless CMS实践经验，后续在Shantec项目中进一步独立落地。"
-  keywords: [Astro, TypeScript, Tailwind, Strapi, SSR, i18n, Node.js]
+    - "与负责Strapi CMS层的后端工程师协作完成内容集成，主要负责Web侧方案与实现。"
+    - "参与多区域、多环境交付，并积累CMS实践经验，后续在Shantec项目中进一步独立落地。"
+  keywords: [Astro, Tailwind, Strapi, SSR, i18n, Node.js]
   startDate: "2023-05-01"
   roles: [高级前端工程师]
   entity: Monotype
