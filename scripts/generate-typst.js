@@ -46,26 +46,26 @@ let t = `#set page(paper: "a4", margin: (x: 13mm, top: 12mm, bottom: 13mm))
 `;
 
 if (b.summary) {
-  t += heading(zh ? '个人简介' : 'SUMMARY') + esc(b.summary) + '\n';
+  t += heading(zh ? '👤 个人简介' : '👤 SUMMARY') + esc(b.summary) + '\n';
 }
 
-t += heading(zh ? '工作经历' : 'EXPERIENCE');
+t += heading(zh ? '💼 工作经历' : '💼 EXPERIENCE');
 for (const w of (r.work || [])) {
   t += `#block(breakable: false)[\n#role[${esc(w.position)}][${esc(w.name)}][${esc(range(w))}]\n${bullets(w.highlights)}\n]\n#v(4pt)\n`;
 }
 
-t += heading(zh ? '精选项目' : 'SELECTED PROJECTS');
+t += heading(zh ? '🚀 精选项目' : '🚀 SELECTED PROJECTS');
 for (const p of projects) {
   t += `#block(breakable: false)[\n*${esc(p.name)}*\n${esc(p.description || '')}\n${bullets((p.highlights || []).slice(0, 3))}\n]\n#v(4pt)\n`;
 }
 
-t += heading(zh ? '技能' : 'SKILLS');
+t += heading(zh ? '🛠 技能' : '🛠 SKILLS');
 for (const s of skills) {
   t += `#block[\n*${esc(s.name)}*\n${esc((s.keywords || []).join(' · '))}\n]\n#v(3pt)\n`;
 }
 
 if (interests.length) {
-  t += heading(zh ? '爱好' : 'INTERESTS');
+  t += heading(zh ? '🚴 爱好' : '🚴 INTERESTS');
   for (const i of interests) {
     const label = i.name ? `*${esc(i.name)}:* ` : '';
     t += `${label}${esc((i.keywords || []).join(' · '))}\n#v(2.5pt)\n`;
@@ -73,7 +73,7 @@ if (interests.length) {
 }
 
 if (r.education?.length) {
-  t += heading(zh ? '教育经历' : 'EDUCATION');
+  t += heading(zh ? '🎓 教育经历' : '🎓 EDUCATION');
   for (const e of r.education) {
     t += `#block(breakable: false)[*${esc(e.institution)}* · ${esc(e.studyType)} ${esc(e.area)}  #h(1fr) ${esc(range(e))}]\n`;
   }
