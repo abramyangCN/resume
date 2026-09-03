@@ -1,16 +1,15 @@
 - name: "Christie's WeChat Miniprogram"
   description: >-
-    Ongoing frontend architecture and development for Christie's China WeChat Miniprogram,
-    covering complex auction, account, and cross-platform workflows.
-    Tech: Taro, React, TypeScript, Redux, WebSocket, Orval, pnpm Workspaces.
+    Ongoing frontend architecture and development for Christie's China WeChat Miniprogram, covering complex auction, account, and cross-platform workflows.
+    Tech: Taro, React, WebSocket, Orval, pnpm Workspaces.
   highlights:
-    - "Established predictable global state management with Redux across complex auction and account workflows."
+    - "Owned frontend state organization and its ongoing evolution across complex auction and account workflows, progressively separating page logic into clearer hooks and business modules."
     - "Designed a WebSocket manager handling dual concurrent connections (global + local), automatic reconnection, and session recovery for reliable online auction interactions."
     - "Refactored the multi-account module to support authorized sub-account switching with per-account permission control and isolated state."
     - "Built a reusable UI component system inspired by shadcn/ui, keeping component source fully owned and customizable for product requirements."
     - "Restructured the codebase into a pnpm Workspaces monorepo supporting both WeChat Miniprogram and LINE LIFF, with shared components, utilities, and types."
-    - "Introduced Orval to generate fully typed API clients from OpenAPI specifications, reducing manual contract maintenance and keeping frontend types synchronized with backend APIs."
-  keywords: [Taro, React, TypeScript, Redux, WebSocket, Orval, Monorepo]
+    - "Introduced Orval to generate API clients from OpenAPI specifications, reducing manual interface definition maintenance and keeping frontend and backend API structures aligned."
+  keywords: [Taro, React, WebSocket, Orval, Monorepo]
   startDate: "2023-05-01"
   roles: [Senior Frontend Engineer]
   entity: "Christie's"
@@ -18,13 +17,13 @@
 
 - name: Shantec Website (Independent Project)
   description: >-
-    Independently architected and delivered a website from 0 to 1, applying experience gained from previous headless CMS projects.
-    Tech: Next.js, TypeScript, Strapi, Tailwind CSS 4, Monorepo.
+    Independently architected and delivered a website from 0 to 1, applying experience gained from previous CMS projects.
+    Tech: Next.js, Strapi, Tailwind CSS 4, Monorepo.
   highlights:
     - "Owned the project end to end, including architecture, frontend implementation, Strapi CMS integration, and delivery."
-    - "Applied and extended Headless CMS experience gained from the Monotype project to independently deliver a Strapi-based solution."
+    - "Extended CMS experience gained from the Monotype project and independently applied it in a Strapi-based solution."
     - "Structured the Web and CMS codebase as a monorepo and built the frontend with Next.js and Tailwind CSS 4."
-  keywords: [Next.js, TypeScript, Strapi, Tailwind CSS 4, Monorepo, Headless CMS]
+  keywords: [Next.js, Strapi, Tailwind CSS 4, Monorepo, CMS]
   roles: [Independent Developer]
   entity: Shantec
   type: website
@@ -46,13 +45,13 @@
 - name: Kallista Miniprogram — AI-first Development
   description: >-
     Production Miniprogram delivered with an AI-first engineering workflow designed to make implementation and ongoing maintenance highly LLM-friendly.
-    Tech: React, TypeScript, Taro, Figma MCP, OpenAPI, Orval, LLM Coding.
+    Tech: React, Taro, Figma MCP, OpenAPI, Orval, LLM Coding.
   highlights:
     - "Decomposed Figma designs into explicit component boundaries and used Figma MCP to provide structured design context for implementation."
-    - "Used Orval to generate API clients and TypeScript types from backend OpenAPI specifications, giving the LLM machine-readable API contracts instead of relying on guessed endpoints or data structures."
-    - "Focused human effort on business rules, architecture and component boundaries, edge cases, and code review while delegating substantial CRUD implementation to LLM coding tools."
-    - "Explored an AI-maintainable engineering model in which design context, types, API contracts, and codebase boundaries act as deterministic guardrails for coding agents."
-  keywords: [React, TypeScript, Taro, Figma MCP, OpenAPI, Orval, AI-first Development]
+    - "Used Orval to generate API clients and interface types from backend OpenAPI specifications, giving the LLM machine-readable API definitions instead of relying on guessed endpoints or data structures."
+    - "Focused human effort on business rules, architecture and component boundaries, edge cases, and code review while delegating substantial CRUD and repetitive implementation to LLM coding tools."
+    - "Explored an engineering model better suited to long-term AI maintenance, using design context, API definitions, and code boundaries as explicit constraints to reduce uncertainty during implementation."
+  keywords: [React, Taro, Figma MCP, OpenAPI, Orval, AI-first Development]
   startDate: "2023-05-01"
   roles: [Senior Frontend Engineer]
   entity: Kallista
@@ -61,12 +60,12 @@
 - name: Monotype Asia Website
   description: >-
     Built and localized the Monotype Asia website for China Mainland, Taiwan, and Korea in collaboration with a backend engineer.
-    Tech: Astro, TypeScript, Tailwind, Strapi, SSR, i18n, Node.js.
+    Tech: Astro, Tailwind, Strapi, SSR, i18n, Node.js.
   highlights:
     - "Architected the Web-side Astro SSR solution for deployment across China Mainland, Taiwan, and Korea, with region-specific locale, routing, and configuration."
-    - "Collaborated with a backend engineer responsible for the Strapi CMS layer, integrating CMS content into the Web experience rather than claiming sole ownership of the backend implementation."
-    - "Worked with multi-environment delivery across regional sites and gained hands-on Headless CMS experience later applied independently in the Shantec project."
-  keywords: [Astro, TypeScript, Tailwind, Strapi, SSR, i18n, Node.js]
+    - "Collaborated with the backend engineer responsible for the Strapi CMS layer to integrate content, while primarily owning the Web-side solution and implementation."
+    - "Worked on multi-region and multi-environment delivery, gaining CMS experience that was later applied independently in the Shantec project."
+  keywords: [Astro, Tailwind, Strapi, SSR, i18n, Node.js]
   startDate: "2023-05-01"
   roles: [Senior Frontend Engineer]
   entity: Monotype
