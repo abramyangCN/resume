@@ -1,14 +1,14 @@
-- name: "Trajectry (前身为安永Fabernovel中国)"
+- name: "Trajectry (前身为 EY Fabernovel China)"
   location: "Shanghai, China"
   position: 高级前端工程师
   startDate: "2023-05-01"
   url: "https://www.trajectry.com"
   highlights:
     - "负责多个复杂React和TypeScript产品的前端架构与交付，覆盖实时系统、跨平台应用、SSR网站、Headless CMS和AI产品。"
-    - "为佳士得产品设计实时通信、多账户权限、跨平台Monorepo、可复用组件体系和类型安全API集成。"
+    - "为Christie's产品设计实时通信、多账户权限、跨平台Monorepo、可复用组件体系和类型安全API集成。"
     - "基于Dify为Richemont知识应用搭建并编排RAG工作流，负责Workflow和节点逻辑以及自定义前端体验。"
-    - "在卡莉斯塔项目中实践AI-first开发流程，结合Figma MCP与OpenAPI/Orval生成的接口契约为LLM提供结构化上下文，并负责业务逻辑、架构边界和代码Review。"
-    - "服务全球奢侈品及高端品牌，包括佳士得、Richemont、爱马仕、卡莉斯塔、梅西卡、宝嘉尔、Bulgari和蒙纳等。"
+    - "在Kallista项目中实践AI-first开发流程，结合Figma MCP与OpenAPI/Orval生成的接口契约为LLM提供结构化上下文，并负责业务逻辑、架构边界和代码Review。"
+    - "服务全球奢侈品及高端品牌，包括Christie's、Richemont、Hermès、Kallista、Messika、Bucherer、Bulgari和Monotype等。"
 
 - name: 上海瑞杰印信息科技有限公司
   location: "Shanghai, China"
@@ -30,12 +30,12 @@
     - "将React Native应用重构为基于WebView的混合架构，实现iOS、Android和H5共享代码库。"
     - "带领由5名工程师（前端、iOS、Android）组成的跨职能团队，协调Sprint计划和技术决策。"
 
-- name: 阳狮璞砺
+- name: Publicis Sapient
   location: "Shanghai, China"
   position: 前端工程师
   url: "https://www.publicisgroupe.com"
   startDate: "2019-04-01"
   endDate: "2020-11-30"
   highlights:
-    - "为华为、万豪及汽车品牌开发响应式活动网站和Mini Site。"
+    - "为Huawei、Marriott及汽车品牌开发响应式活动网站和Mini Site。"
     - "在分布式交付模式下与新加坡、日本和印度团队协作。"
