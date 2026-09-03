@@ -1,44 +1,71 @@
 - name: "Christie's WeChat Miniprogram"
   description: >-
-    Ongoing retainer frontend development for Christie's China WeChat Miniprogram,
-    delivering new features and platform enhancements across release cycles.
-    Tech: Taro, React, TypeScript, Redux, WebSocket, Orval, pnpm workspaces.
+    Ongoing frontend architecture and development for Christie's China WeChat Miniprogram,
+    covering complex auction, account, and cross-platform workflows.
+    Tech: Taro, React, TypeScript, Redux, WebSocket, Orval, pnpm Workspaces.
   highlights:
-    - "Adopted Redux for global state management, establishing a predictable data flow across complex auction and account workflows."
-    - "Designed a WebSocket manager module handling dual concurrent connections (global + local), with automatic reconnection and session recovery to ensure reliability during online auctions."
-    - "Refactored multi-account module to support switching among authorized sub-accounts under an enterprise account, with per-account permission control and isolated state management."
-    - "Built a reusable UI component library inspired by shadcn/ui, keeping components fully owned and customizable per page."
-    - "Restructured the codebase into a pnpm workspaces monorepo to support a LINE LIFF page alongside the WeChat Miniprogram, extracting shared components, utilities, and types into independent packages reused across both platforms."
-    - "Introduced Orval to auto-generate fully-typed API client code from the backend's OpenAPI spec, eliminating manual type maintenance and keeping the client in sync with API changes across release cycles."
-  keywords: [Taro, React, TypeScript, WeChat Miniprogram, Orval]
+    - "Established predictable global state management with Redux across complex auction and account workflows."
+    - "Designed a WebSocket manager handling dual concurrent connections (global + local), automatic reconnection, and session recovery for reliable online auction interactions."
+    - "Refactored the multi-account module to support authorized sub-account switching with per-account permission control and isolated state."
+    - "Built a reusable UI component system inspired by shadcn/ui, keeping component source fully owned and customizable for product requirements."
+    - "Restructured the codebase into a pnpm Workspaces monorepo supporting both WeChat Miniprogram and LINE LIFF, with shared components, utilities, and types."
+    - "Introduced Orval to generate fully typed API clients from OpenAPI specifications, reducing manual contract maintenance and keeping frontend types synchronized with backend APIs."
+  keywords: [Taro, React, TypeScript, Redux, WebSocket, Orval, Monorepo]
   startDate: "2023-05-01"
   roles: [Senior Frontend Engineer]
   entity: "Christie's"
   type: application
 
-- name: Luxury Brand Miniprograms
+- name: Shantec Website (Independent Project)
   description: >-
-    Delivered WeChat Miniprogram projects for Hermès, Kallista, Messika, and Bucherer,
-    covering after-sales service, e-commerce, appointment booking, and product showcase.
-    Tech: Taro, React, TypeScript, WeChat Miniprogram.
+    Independently architected and delivered a website from 0 to 1, applying experience gained from previous headless CMS projects.
+    Tech: Next.js, TypeScript, Strapi, Tailwind CSS 4, Monorepo.
   highlights:
-    - "Built a full e-commerce flow with persisted cart state, WeChat Pay integration, and multi-step (shouqianba) checkout"
-    - "Implemented real-time in-app chat via WebSocket with message queuing, delivery tracking, and automatic reconnection."
-    - "Integrated WeChat Map with geo-based store search, custom markers, and POI filtering across multiple miniprograms."
-  keywords: [Taro, React, TypeScript, WeChat Miniprogram, Orval]
+    - "Owned the project end to end, including architecture, frontend implementation, Strapi CMS integration, and delivery."
+    - "Applied and extended Headless CMS experience gained from the Monotype project to independently deliver a Strapi-based solution."
+    - "Structured the Web and CMS codebase as a monorepo and built the frontend with Next.js and Tailwind CSS 4."
+  keywords: [Next.js, TypeScript, Strapi, Tailwind CSS 4, Monorepo, Headless CMS]
+  roles: [Independent Developer]
+  entity: Shantec
+  type: website
+
+- name: Richemont AI Knowledge Workflow
+  description: >-
+    AI-assisted research and knowledge retrieval workflow built on Richemont monthly reports using Dify knowledge base and workflow capabilities.
+    Tech: Dify, RAG, LLM Workflow, Custom Frontend.
+  highlights:
+    - "Worked with monthly report content indexed in a Dify knowledge base so relevant knowledge chunks could be retrieved as context for user queries."
+    - "Owned workflow orchestration and node logic across task execution, conditional decisions, and workflow progression."
+    - "Built the custom frontend experience that exposed the multi-stage AI workflow as an interactive product."
+  keywords: [Dify, RAG, LLM, Workflow Orchestration, AI Product]
   startDate: "2023-05-01"
   roles: [Senior Frontend Engineer]
-  entity: Trajectry
+  entity: Richemont
+  type: application
+
+- name: Kallista Miniprogram — AI-first Development
+  description: >-
+    Production Miniprogram delivered with an AI-first engineering workflow designed to make implementation and ongoing maintenance highly LLM-friendly.
+    Tech: React, TypeScript, Taro, Figma MCP, OpenAPI, Orval, LLM Coding.
+  highlights:
+    - "Decomposed Figma designs into explicit component boundaries and used Figma MCP to provide structured design context for implementation."
+    - "Used Orval to generate API clients and TypeScript types from backend OpenAPI specifications, giving the LLM machine-readable API contracts instead of relying on guessed endpoints or data structures."
+    - "Focused human effort on business rules, architecture and component boundaries, edge cases, and code review while delegating substantial CRUD implementation to LLM coding tools."
+    - "Explored an AI-maintainable engineering model in which design context, types, API contracts, and codebase boundaries act as deterministic guardrails for coding agents."
+  keywords: [React, TypeScript, Taro, Figma MCP, OpenAPI, Orval, AI-first Development]
+  startDate: "2023-05-01"
+  roles: [Senior Frontend Engineer]
+  entity: Kallista
   type: application
 
 - name: Monotype Asia Website
   description: >-
-    Built and localized the Monotype Asia website for China Mainland, Taiwan, and Korea.
+    Built and localized the Monotype Asia website for China Mainland, Taiwan, and Korea in collaboration with a backend engineer.
     Tech: Astro, TypeScript, Tailwind, Strapi, SSR, i18n, Node.js.
   highlights:
-    - "Architected a single Astro SSR codebase deployable across China Mainland, Taiwan, and Korea markets, with region-specific locale, routing, and configuration driven by build-time environment variables."
-    - "Integrated Strapi as a headless CMS to serve region-specific content, with dynamic sitemap generation and full SSR data fetching per market."
-    - "Maintained multi-environment deployment pipeline (dev / staging / UAT / prod) across three regional sites, with CI/CD triggered per region via branch-based merge strategies."
+    - "Architected the Web-side Astro SSR solution for deployment across China Mainland, Taiwan, and Korea, with region-specific locale, routing, and configuration."
+    - "Collaborated with a backend engineer responsible for the Strapi CMS layer, integrating CMS content into the Web experience rather than claiming sole ownership of the backend implementation."
+    - "Worked with multi-environment delivery across regional sites and gained hands-on Headless CMS experience later applied independently in the Shantec project."
   keywords: [Astro, TypeScript, Tailwind, Strapi, SSR, i18n, Node.js]
   startDate: "2023-05-01"
   roles: [Senior Frontend Engineer]
@@ -47,8 +74,7 @@
 
 - name: Tootools Miniprogram
   description: >-
-    Full-featured WeChat Miniprogram for custom clothing design with real-time
-    2D editing and 3D preview, serving as the core product of the company.
+    Full-featured WeChat Miniprogram for custom clothing design with real-time 2D editing and 3D preview, serving as the core product of the company.
     Tech: React, Fabric.js, Three.js, Uniapp, Node.js.
   highlights:
     - "Architected a dual-rendering design editor with layer management, pattern/font/drawing tools, and undo/redo history, built on a rendering abstraction layer that decouples UI logic from Fabric.js and Three.js internals."
@@ -63,12 +89,10 @@
 
 - name: Fumamx Hybrid App
   description: >-
-    Rebuilt a React Native SaaS application into a hybrid architecture to improve
-    user experience and accelerate cross-platform delivery.
+    Rebuilt a React Native SaaS application into a hybrid architecture to improve user experience and accelerate cross-platform delivery.
     Tech: React Native, Vue.js, JS Bridge, iOS, Android.
   highlights:
-    - "Designed and implemented a bidirectional JS bridge using postMessage, enabling
-      structured communication between WebView and native iOS/Android layers."
+    - "Designed and implemented a bidirectional JS bridge using postMessage, enabling structured communication between WebView and native iOS/Android layers."
   keywords: [React Native, Vue.js, Hybrid Architecture, JS Bridge, iOS, Android]
   startDate: "2020-12-01"
   endDate: "2021-09-01"
@@ -81,10 +105,8 @@
     Developed the official marketing website for DS Automobile China.
     Tech: JavaScript, CSS Animation, Baidu Map SDK.
   highlights:
-    - "Built a high-fidelity animated landing page with scroll-driven and entrance
-      animations using CSS and JavaScript."
-    - "Integrated Baidu Map SDK with custom markers, cluster rendering, and fuzzy
-      search for a nationwide dealer."
+    - "Built a high-fidelity animated landing page with scroll-driven and entrance animations using CSS and JavaScript."
+    - "Integrated Baidu Map SDK with custom markers, cluster rendering, and fuzzy search for a nationwide dealer network."
   keywords: [JavaScript, Baidu Map, CSS Animation, WeChat]
   startDate: "2020-04-01"
   endDate: "2020-08-01"
@@ -94,12 +116,10 @@
 
 - name: IQOS EDM Email Templates
   description: >-
-    Delivered a series of responsive EDM email templates for IQOS marketing
-    campaigns, coordinated across APAC teams.
+    Delivered a series of responsive EDM email templates for IQOS marketing campaigns, coordinated across APAC teams.
     Tech: MJML, Gulp.js, Litmus.
   highlights:
-    - "Built responsive, cross-client email templates using MJML, validated across
-      15+ email clients via Litmus."
+    - "Built responsive, cross-client email templates using MJML, validated across 15+ email clients via Litmus."
     - "Automated email compilation and asset inlining with a Gulp-based build workflow."
   keywords: [MJML, Gulp.js, Responsive Email, Litmus]
   startDate: "2020-04-01"
@@ -110,14 +130,11 @@
 
 - name: Huawei Campaign Minisites
   description: >-
-    Developed multiple interactive marketing minisites for Huawei campaigns,
-    focusing on mobile-first experiences and map integration.
+    Developed multiple interactive marketing minisites for Huawei campaigns, focusing on mobile-first experiences and map integration.
     Tech: React.js, Canvas, Tencent Map, WeChat JSSDK, Swiper.js.
   highlights:
-    - "Built canvas-based interactive mobile experience with gesture controls and
-      frame animation for campaign engagement."
-    - "Extended Swiper.js with custom card collapse and 3D flip transitions to
-      match design specifications."
+    - "Built canvas-based interactive mobile experience with gesture controls and frame animation for campaign engagement."
+    - "Extended Swiper.js with custom card collapse and 3D flip transitions to match design specifications."
   keywords: [React.js, Canvas, Tencent Map, WeChat JSSDK, Swiper.js, Material UI]
   startDate: "2019-08-01"
   endDate: "2020-08-01"
@@ -127,13 +144,11 @@
 
 - name: Marriott Website CN Localization
   description: >-
-    Adapted Marriott's global website for the Chinese market, replacing unsupported
-    third-party services and ensuring feature parity.
+    Adapted Marriott's global website for the Chinese market, replacing unsupported third-party services and ensuring feature parity.
     Tech: JavaScript, Baidu Map SDK.
   highlights:
-    - "Re-implemented Google Maps-based hotel locator with Baidu Map SDK, preserving
-      search, filtering, and marker functionality for CN users."
-    - "Collaborated with the India-based development team"
+    - "Re-implemented Google Maps-based hotel locator with Baidu Map SDK, preserving search, filtering, and marker functionality for CN users."
+    - "Collaborated with the India-based development team."
   keywords: [Baidu Map, Localization, JavaScript, Cross-region Collaboration]
   startDate: "2019-04-01"
   endDate: "2019-08-01"
