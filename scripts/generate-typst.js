@@ -25,12 +25,13 @@ const interests = r.interests || [];
 const b = r.basics || {};
 
 const font = '"Noto Sans CJK SC"';
-const leading = zh ? '0.9em' : '0.62em';
-const listSpacing = zh ? '0.36em' : '0.22em';
+const leading = zh ? '0.62em' : '0.58em';
+const paragraphSpacing = zh ? '0.72em' : '0.52em';
+const listSpacing = zh ? '0.48em' : '0.30em';
 
 let t = `#set page(paper: "a4", margin: (x: 13mm, top: 12mm, bottom: 13mm))
 #set text(size: 9.2pt, font: ${font}, fill: rgb("#202124"))
-#set par(leading: ${leading}, justify: false)
+#set par(leading: ${leading}, spacing: ${paragraphSpacing}, justify: false)
 #set list(indent: 1.1em, body-indent: .45em, spacing: ${listSpacing})
 #let accent = rgb("#1f4e79")
 #let section(title) = { v(6pt); text(size: 11pt, weight: "bold", fill: accent, title); v(2.5pt); line(length: 100%, stroke: .6pt + rgb("#9aa0a6")); v(4pt) }
@@ -51,24 +52,24 @@ if (b.summary) {
 
 t += heading(zh ? '💼 工作经历' : '💼 EXPERIENCE');
 for (const w of (r.work || [])) {
-  t += `#block(breakable: false)[\n#role[${esc(w.position)}][${esc(w.name)}][${esc(range(w))}]\n${bullets(w.highlights)}\n]\n#v(4pt)\n`;
+  t += `#block(breakable: false)[\n#role[${esc(w.position)}][${esc(w.name)}][${esc(range(w))}]\n${bullets(w.highlights)}\n]\n#v(${zh ? '7pt' : '5pt'})\n`;
 }
 
 t += heading(zh ? '🚀 精选项目' : '🚀 SELECTED PROJECTS');
 for (const p of projects) {
-  t += `#block(breakable: false)[\n*${esc(p.name)}*\n${esc(p.description || '')}\n${bullets((p.highlights || []).slice(0, 3))}\n]\n#v(4pt)\n`;
+  t += `#block(breakable: false)[\n*${esc(p.name)}*\n${esc(p.description || '')}\n${bullets((p.highlights || []).slice(0, 3))}\n]\n#v(${zh ? '7pt' : '5pt'})\n`;
 }
 
 t += heading(zh ? '🛠 技能' : '🛠 SKILLS');
 for (const s of skills) {
-  t += `#block[\n*${esc(s.name)}*\n${esc((s.keywords || []).join(' · '))}\n]\n#v(3pt)\n`;
+  t += `#block[\n*${esc(s.name)}*\n${esc((s.keywords || []).join(' · '))}\n]\n#v(${zh ? '5pt' : '3pt'})\n`;
 }
 
 if (interests.length) {
   t += heading(zh ? '🚴 爱好' : '🚴 INTERESTS');
   for (const i of interests) {
     const label = i.name ? `*${esc(i.name)}:* ` : '';
-    t += `${label}${esc((i.keywords || []).join(' · '))}\n#v(2.5pt)\n`;
+    t += `${label}${esc((i.keywords || []).join(' · '))}\n#v(${zh ? '4pt' : '2.5pt'})\n`;
   }
 }
 
