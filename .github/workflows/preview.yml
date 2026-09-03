@@ -49,6 +49,15 @@ jobs:
           cp resume.html dist/index.html
           cp resume.zh.html dist/zh/index.html
 
+      - name: Generate English and Chinese PDFs
+        run: |
+          mkdir -p artifacts
+          pnpm dlx playwright install --with-deps chromium
+          pnpm dlx playwright pdf --paper-format A4 "file://${PWD}/resume.html" artifacts/resume.en.pdf
+          pnpm dlx playwright pdf --paper-format A4 "file://${PWD}/resume.zh.html" artifacts/resume.zh.pdf
+
+      - name: Inject language switcher into web preview
+        run: |
           node scripts/inject-lang-switcher.js dist/index.html en zh ./zh/
           node scripts/inject-lang-switcher.js dist/zh/index.html zh en ../
 
@@ -59,6 +68,14 @@ jobs:
           SLUG=$(printf '%s' "${GITHUB_REF_NAME}" | sed 's#[^A-Za-z0-9._-]#-#g')
           echo "slug=${SLUG}" >> "$GITHUB_OUTPUT"
           echo "Preview path: preview/${SLUG}"
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: resume-pdf-${{ steps.preview.outputs.slug }}
+          path: artifacts/*.pdf
+          if-no-files-found: error
+          retention-days: 14
 
       - name: Deploy branch preview
         uses: JamesIves/github-pages-deploy-action@v4
