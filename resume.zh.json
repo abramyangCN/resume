@@ -7,370 +7,101 @@
     "email": "abram.yang@outlook.com",
     "phone": "+86 159-2109-8538",
     "url": "https://gh.abramyang.com/resume",
-    "summary": "拥有7年以上React和小程序生态系统经验的高级前端工程师。应用AI驱动的工作流程加速开发周期并改善工程架构。擅长基于canvas的2D交互系统和基于Three.js的3D渲染开发。与亚太市场合作，领导跨平台工程团队。",
-    "location": {
-      "city": "上海",
-      "region": "上海",
-      "countryCode": "CN"
-    },
+    "summary": "高级前端工程师 / 前端负责人，拥有7年以上Web与跨平台产品研发经验，长期使用React、TypeScript构建复杂业务系统，具备独立负责Web项目架构、技术选型、工程体系和0到1交付的经验。曾负责实时拍卖、多账户权限、跨平台Monorepo、SSR多区域网站、2D/3D可视化编辑器等复杂产品，并具备Node.js、WebSocket、Headless CMS和CI/CD实践。具有实际AI产品落地经验，曾基于Dify负责企业知识库RAG Workflow编排、节点逻辑和自定义前端，并在生产项目中实践AI-first开发模式。曾担任前端负责人并带领跨平台工程团队，与亚太多个市场及跨职能团队协作交付产品。",
+    "location": {"city": "上海", "region": "上海", "countryCode": "CN"},
     "profiles": [
-      {
-        "network": "LinkedIn",
-        "username": "abramyang",
-        "url": "https://www.linkedin.com/in/abramyang"
-      },
-      {
-        "network": "Github",
-        "username": "abramyangCN",
-        "url": "https://www.github.com/abramyangCN"
-      }
+      {"network": "LinkedIn", "username": "abramyang", "url": "https://www.linkedin.com/in/abramyang"},
+      {"network": "Github", "username": "abramyangCN", "url": "https://www.github.com/abramyangCN"}
     ]
   },
   "work": [
     {
-      "name": "Trajectry (前身为安永Fabernovel中国)",
-      "location": "上海, 中国",
-      "position": "高级前端工程师",
-      "startDate": "2023-05-01",
-      "url": "https://www.trajectry.com",
+      "name": "Trajectry (前身为安永Fabernovel中国)", "location": "上海, 中国", "position": "高级前端工程师", "startDate": "2023-05-01", "url": "https://www.trajectry.com",
       "highlights": [
-        "使用Taro、React、Weapp-tailwindcss和TypeScript架构并交付生产级的微信和企业微信小程序。",
-        "设计并集成AI驱动的客户支持和多语言翻译服务到生产系统中。",
-        "为全球奢侈品和高端品牌提供服务，包括佳士得、爱马仕、卡莉斯塔、梅西卡、宝嘉尔、宝格丽等。"
+        "负责多个React / TypeScript Web与跨平台项目的前端架构和交付，覆盖实时系统、Headless CMS、SSR、多区域网站、小程序及AI产品。",
+        "为Christie's等复杂业务系统设计实时通信、账户权限、跨平台Monorepo、类型安全API Client与可复用组件体系。",
+        "基于Dify参与Richemont企业知识库AI项目，负责RAG Workflow编排、节点逻辑设计以及自定义前端开发。",
+        "在Kallista项目中实践AI-first开发流程，通过Figma MCP提供设计上下文，并基于OpenAPI / Orval向大模型提供接口和类型信息；人工负责业务逻辑、架构边界和Review，让LLM承担主要CRUD实现。",
+        "参与Monotype亚洲多区域官网建设；随后独立从0到1完成Shantec官网，使用Strapi、Next.js、Tailwind CSS 4及Monorepo完成整体交付。",
+        "服务全球奢侈品及高端品牌，包括Christie's、Richemont、Hermès、Kallista、Messika、Bucherer、Bulgari、Monotype等。"
       ]
     },
     {
-      "name": "上海瑞杰印信息科技有限公司",
-      "location": "上海, 中国",
-      "position": "前端负责人",
-      "startDate": "2021-09-01",
-      "endDate": "2023-02-15",
-      "highlights": [
-        "使用React、Fabric.js和Three.js设计并实现一个可定制的服装平台，具有实时2D/3D渲染功能。",
-        "领导DIY服装应用和微信小程序的前端架构和交付，管理敏捷团队并建立CI/CD基础设施。",
-        "开发了一个Node.js无头渲染服务，从用户设计生成可打印的高分辨率输出，实现离线导出而不受客户端渲染限制。"
-      ]
+      "name": "上海瑞杰印信息科技有限公司", "location": "上海, 中国", "position": "前端负责人", "startDate": "2021-09-01", "endDate": "2023-02-15",
+      "highlights": ["使用React、Fabric.js和Three.js设计并实现可定制服装平台，具有实时2D/3D渲染功能。", "领导DIY服装应用和微信小程序的前端架构和交付，管理敏捷团队并建立CI/CD基础设施。", "开发Node.js无头渲染服务，从用户设计生成可打印的高分辨率输出。"]
     },
     {
-      "name": "上海孚盟软件有限公司",
-      "location": "上海, 中国",
-      "position": "高级前端工程师",
-      "url": "https://www.fumasoft.com",
-      "startDate": "2020-12-01",
-      "endDate": "2021-09-01",
-      "highlights": [
-        "将一个React Native应用重构为基于WebView的混合架构，实现iOS、Android和H5之间的共享代码库。",
-        "领导一个由5名工程师（前端、iOS、Android）组成的跨职能团队，协调冲刺计划和技术决策。"
-      ]
+      "name": "上海孚盟软件有限公司", "location": "上海, 中国", "position": "高级前端工程师", "url": "https://www.fumasoft.com", "startDate": "2020-12-01", "endDate": "2021-09-01",
+      "highlights": ["将React Native应用重构为基于WebView的混合架构，实现iOS、Android和H5之间的共享代码库。", "领导由5名工程师（前端、iOS、Android）组成的跨职能团队，协调冲刺计划和技术决策。"]
     },
     {
-      "name": "阳狮璞砺",
-      "location": "上海, 中国",
-      "position": "前端工程师",
-      "url": "https://www.publicisgroupe.com",
-      "startDate": "2019-04-01",
-      "endDate": "2020-11-30",
-      "highlights": [
-        "为华为、万豪和汽车品牌开发响应式活动网站和迷你网站。",
-        "在分布式交付模型中与新加坡、日本和印度团队合作。"
-      ]
+      "name": "阳狮璞砺", "location": "上海, 中国", "position": "前端工程师", "url": "https://www.publicisgroupe.com", "startDate": "2019-04-01", "endDate": "2020-11-30",
+      "highlights": ["为华为、万豪和汽车品牌开发响应式活动网站和迷你网站。", "在分布式交付模型中与新加坡、日本和印度团队合作。"]
     }
   ],
   "skills": [
-    {
-      "name": "前端",
-      "keywords": [
-        "React",
-        "TypeScript",
-        "Vue",
-        "TailwindCSS",
-        "混合架构",
-        "小程序"
-      ]
-    },
-    {
-      "name": "AI辅助开发",
-      "keywords": [
-        "Claude Code",
-        "GitHub Copilot",
-        "提示工程",
-        "LLM工作流优化"
-      ]
-    },
-    {
-      "name": "渲染与可视化",
-      "keywords": [
-        "Fabric.js",
-        "Three.js",
-        "WebGL",
-        "交互编辑系统"
-      ]
-    },
-    {
-      "name": "后端与基础设施",
-      "keywords": [
-        "Node.js",
-        "REST API",
-        "CI/CD",
-        "Docker",
-        "云部署"
-      ]
-    }
+    {"name": "Web与前端架构", "keywords": ["React", "TypeScript", "Next.js", "Astro", "Vue", "SSR", "组件架构", "跨平台架构", "小程序"]},
+    {"name": "工程化与后端", "keywords": ["Node.js", "WebSocket", "REST API", "OpenAPI", "Orval", "pnpm Workspaces", "Monorepo", "CI/CD", "Docker", "Strapi"]},
+    {"name": "AI工程与AI辅助开发", "keywords": ["Dify", "RAG Workflow", "LLM Workflow编排", "AI-first Development", "Figma MCP", "Claude Code", "GitHub Copilot", "Context Engineering"]},
+    {"name": "渲染与复杂交互", "keywords": ["Fabric.js", "Three.js", "WebGL", "Canvas", "交互编辑系统"]}
   ],
   "volunteer": [],
-  "education": [
-    {
-      "institution": "上海电机学院",
-      "url": "https://www.sdju.edu.cn",
-      "area": "电子工程",
-      "studyType": "学士",
-      "startDate": "2015-09-01",
-      "endDate": "2019-06-01"
-    }
-  ],
+  "education": [{"institution": "上海电机学院", "url": "https://www.sdju.edu.cn", "area": "电子工程", "studyType": "学士", "startDate": "2015-09-01", "endDate": "2019-06-01"}],
   "projects": [
     {
-      "name": "佳士得微信小程序",
-      "description": "为佳士得中国微信小程序提供持续的前端开发，交付新功能和平台增强。技术：Taro、React、TypeScript、Redux、WebSocket、Orval、pnpm工作区。",
-      "highlights": [
-        "采用Redux进行全局状态管理，建立复杂拍卖和账户工作流中的可预测数据流。",
-        "设计一个WebSocket管理模块，处理双重并发连接（全局+本地），具有自动重连和会话恢复功能，以确保在线拍卖期间的可靠性。",
-        "重构多账户模块，以支持在企业账户下切换授权子账户，具有每个账户的权限控制和隔离状态管理。",
-        "构建一个可重用的UI组件库，灵感来自shadcn/ui，保持组件完全拥有并可按页面自定义。",
-        "将代码库重构为pnpm工作区单体仓库，以支持LINE LIFF页面与微信小程序，提取共享组件、工具和类型到独立包中，在两个平台间重用。",
-        "引入Orval自动生成完全类型化的API客户端代码，从后端的OpenAPI规范中生成，消除手动类型维护，并保持客户端与API在发布周期中的同步。"
-      ],
-      "keywords": [
-        "Taro",
-        "React",
-        "TypeScript",
-        "微信小程序",
-        "Orval"
-      ],
-      "startDate": "2023-05-01",
-      "roles": [
-        "高级前端工程师"
-      ],
-      "entity": "佳士得",
-      "type": "应用"
+      "name": "佳士得微信小程序 / LINE LIFF", "description": "持续负责佳士得中国微信小程序及相关跨平台页面的前端架构和交付。技术：Taro、React、TypeScript、Redux、WebSocket、Orval、pnpm Workspaces。",
+      "highlights": ["采用Redux进行全局状态管理，建立复杂拍卖和账户工作流中的可预测数据流。", "设计独立WebSocket Manager，同时管理Global / Local双连接，并实现自动重连、会话恢复和连接生命周期管理。", "重构企业多账户体系，支持授权子账户切换、账户级权限控制及状态隔离。", "建立内部可复用组件体系，借鉴shadcn/ui的ownership思路，保持组件源码完全可控并支持业务定制。", "将工程重构为pnpm Workspaces Monorepo，同时支持微信小程序与LINE LIFF，并抽离共享组件、工具函数和类型定义。", "引入Orval基于OpenAPI自动生成类型安全API Client，减少手工接口和类型维护成本。"],
+      "keywords": ["Taro", "React", "TypeScript", "Redux", "WebSocket", "Orval", "Monorepo"], "startDate": "2023-05-01", "roles": ["高级前端工程师"], "entity": "佳士得", "type": "应用"
     },
     {
-      "name": "奢侈品牌小程序",
-      "description": "为爱马仕、卡莉斯塔、梅西卡和宝嘉尔交付微信小程序项目，涵盖售后服务、电子商务、预约和产品展示。技术：Taro、React、TypeScript、微信小程序。",
-      "highlights": [
-        "构建一个完整的电子商务流程，具有持久的购物车状态、微信支付集成和多步骤（收钱吧）结账。",
-        "通过WebSocket实现实时应用内聊天，具有消息排队、交付跟踪和自动重连功能。",
-        "集成微信地图，支持基于地理位置的门店搜索、自定义标记和多个小程序的POI过滤。"
-      ],
-      "keywords": [
-        "Taro",
-        "React",
-        "TypeScript",
-        "微信小程序",
-        "Orval"
-      ],
-      "startDate": "2023-05-01",
-      "roles": [
-        "高级前端工程师"
-      ],
-      "entity": "Trajectry",
-      "type": "应用"
+      "name": "Shantec 官网", "description": "独立从0到1完成基于Headless CMS的企业官网。技术：Next.js、TypeScript、Strapi、Tailwind CSS 4、Monorepo。",
+      "highlights": ["独立负责项目从0到1的架构设计、开发和交付，同时覆盖Next.js Web前端和Strapi CMS。", "基于此前Monotype Headless CMS项目的实践经验，进一步学习并独立完成Strapi工程落地。", "采用Monorepo组织Web与CMS工程，并使用Tailwind CSS 4实现网站UI。"],
+      "keywords": ["Next.js", "TypeScript", "Strapi", "Tailwind CSS 4", "Monorepo", "Headless CMS"], "roles": ["高级前端工程师"], "entity": "Shantec", "type": "网站"
     },
     {
-      "name": "蒙纳亚洲网站",
-      "description": "为中国大陆、台湾和韩国构建并本地化蒙纳亚洲网站。技术：Astro、TypeScript、Tailwind、Strapi、SSR、i18n、Node.js。",
-      "highlights": [
-        "架构一个可部署于中国大陆、台湾和韩国市场的单一Astro SSR代码库，具有特定区域的语言环境、路由和配置，由构建时环境变量驱动。",
-        "集成Strapi作为无头CMS，提供特定区域的内容，具有动态网站地图生成和每个市场的完整SSR数据获取。",
-        "维护跨三个区域网站的多环境部署管道（开发/预发布/用户验收测试/生产），通过基于分支的合并策略触发每个区域的CI/CD。"
-      ],
-      "keywords": [
-        "Astro",
-        "TypeScript",
-        "Tailwind",
-        "Strapi",
-        "SSR",
-        "i18n",
-        "Node.js"
-      ],
-      "startDate": "2023-05-01",
-      "roles": [
-        "高级前端工程师"
-      ],
-      "entity": "蒙纳",
-      "type": "网站"
+      "name": "Richemont 企业知识库 AI Workflow", "description": "基于Dify构建面向企业月度报告的知识检索与AI分析流程。技术：Dify、RAG、LLM Workflow。",
+      "highlights": ["基于Richemont月度报告知识库参与AI Research / Knowledge Retrieval产品开发，报告内容以知识切片形式进入知识库，并由AI按用户问题检索相关上下文。", "负责Dify Workflow编排和节点逻辑设计，将任务执行、条件判断和流程推进等不同职责拆分至相应Workflow节点 / Agent。", "负责自定义前端开发，将知识检索和多阶段AI Workflow封装为面向用户的交互体验。"],
+      "keywords": ["Dify", "RAG", "LLM", "Workflow Orchestration", "Knowledge Retrieval"], "roles": ["高级前端工程师"], "entity": "Richemont", "type": "应用"
     },
     {
-      "name": "Tootools小程序",
-      "description": "具有实时2D编辑和3D预览的全功能微信小程序，用于定制服装设计，作为公司的核心产品。技术：React、Fabric.js、Three.js、Uniapp、Node.js。",
-      "highlights": [
-        "架构一个双渲染设计编辑器，具有图层管理、图案/字体/绘图工具和撤销/重做历史，构建在一个渲染抽象层上，将UI逻辑与Fabric.js和Three.js内部解耦。",
-        "通过Three.js Decal Geometry将用户设计投影到glTF服装模型上，实现实时3D预览。",
-        "构建基于Node.js的服务器端渲染工作流程，以导出高分辨率的可打印设计资产。"
-      ],
-      "keywords": [
-        "React.js",
-        "Fabric.js",
-        "Three.js",
-        "Uniapp",
-        "Node.js",
-        "微信小程序"
-      ],
-      "startDate": "2021-09-15",
-      "endDate": "2023-02-15",
-      "roles": [
-        "前端负责人"
-      ],
-      "entity": "Tootools",
-      "type": "应用"
+      "name": "Kallista 微信小程序 — AI-first Development", "description": "将生产项目作为AI-first开发实践，以结构化上下文和工程边界驱动大模型承担主要实现。技术：Taro、React、TypeScript、Figma MCP、Orval、OpenAPI。",
+      "highlights": ["将Figma设计稿拆分为明确的组件边界，并通过Figma MCP获取设计上下文，在完成基础组件调优后交由LLM扩展业务页面。", "使用Orval基于后端OpenAPI自动生成API Client与完整TypeScript类型，使接口Contract能够作为大模型的结构化上下文。", "人工主要负责业务规则描述、架构与组件边界、异常场景及Review，让LLM承担大量CRUD和重复性实现工作。", "探索通过设计、类型、API Contract和工程约束提升AI Coding的确定性与长期可维护性。"],
+      "keywords": ["Taro", "React", "TypeScript", "Figma MCP", "Orval", "OpenAPI", "AI-first Development"], "roles": ["高级前端工程师"], "entity": "Kallista", "type": "应用"
     },
     {
-      "name": "Fumamx混合应用",
-      "description": "将一个React Native SaaS应用重建为混合架构，以改善用户体验并加速跨平台交付。技术：React Native、Vue.js、JS Bridge、iOS、Android。",
-      "highlights": [
-        "设计并实现一个双向JS桥，使用postMessage，启用WebView与本地iOS/Android层之间的结构化通信。"
-      ],
-      "keywords": [
-        "React Native",
-        "Vue.js",
-        "混合架构",
-        "JS Bridge",
-        "iOS",
-        "Android"
-      ],
-      "startDate": "2020-12-01",
-      "endDate": "2021-09-01",
-      "roles": [
-        "前端负责人"
-      ],
-      "entity": "Fumamx",
-      "type": "应用"
+      "name": "蒙纳亚洲网站", "description": "为中国大陆、台湾和韩国构建并本地化Monotype亚洲网站。技术：Astro、TypeScript、Tailwind、Strapi、SSR、i18n、Node.js。",
+      "highlights": ["架构可部署于中国大陆、台湾和韩国市场的单一Astro SSR代码库，区域语言、路由和配置由构建时环境变量驱动。", "与后端工程师协作集成Strapi Headless CMS，实现区域化内容、动态Sitemap和各市场SSR数据获取。", "维护跨三个区域网站的多环境部署管道，通过基于分支的合并策略触发各区域CI/CD。"],
+      "keywords": ["Astro", "TypeScript", "Tailwind", "Strapi", "SSR", "i18n", "Node.js"], "startDate": "2023-05-01", "roles": ["高级前端工程师"], "entity": "蒙纳", "type": "网站"
     },
     {
-      "name": "DS汽车官方网站",
-      "description": "为DS汽车中国开发官方营销网站。技术：JavaScript、CSS动画、百度地图SDK。",
-      "highlights": [
-        "使用CSS和JavaScript构建高保真动画着陆页，具有滚动驱动和进入动画。",
-        "集成百度地图SDK，具有自定义标记、聚类渲染和全国经销商的模糊搜索。"
-      ],
-      "keywords": [
-        "JavaScript",
-        "百度地图",
-        "CSS动画",
-        "微信"
-      ],
-      "startDate": "2020-04-01",
-      "endDate": "2020-08-01",
-      "roles": [
-        "前端工程师"
-      ],
-      "entity": "DS汽车",
-      "type": "网站"
+      "name": "奢侈品牌小程序", "description": "为爱马仕、梅西卡和宝嘉尔等品牌交付微信小程序项目，涵盖售后服务、电子商务、预约和产品展示。",
+      "highlights": ["构建完整电子商务流程，包含持久化购物车状态、微信支付集成和多步骤结账。", "通过WebSocket实现实时应用内聊天，包含消息队列、投递状态和自动重连。", "集成微信地图，支持基于地理位置的门店搜索、自定义Marker和POI筛选。"],
+      "keywords": ["Taro", "React", "TypeScript", "微信小程序", "WebSocket"], "startDate": "2023-05-01", "roles": ["高级前端工程师"], "entity": "Trajectry", "type": "应用"
     },
     {
-      "name": "IQOS EDM电子邮件模板",
-      "description": "为IQOS营销活动交付一系列响应式EDM电子邮件模板，在亚太团队之间协调。技术：MJML、Gulp.js、Litmus。",
-      "highlights": [
-        "使用MJML构建响应式、跨客户端的电子邮件模板，通过Litmus在15个以上的电子邮件客户端中验证。",
-        "使用基于Gulp的构建工作流程自动化电子邮件编译和资产内联。"
-      ],
-      "keywords": [
-        "MJML",
-        "Gulp.js",
-        "响应式电子邮件",
-        "Litmus"
-      ],
-      "startDate": "2020-04-01",
-      "endDate": "2020-05-01",
-      "roles": [
-        "前端工程师"
-      ],
-      "entity": "IQOS",
-      "type": "应用"
+      "name": "Tootools小程序", "description": "具有实时2D编辑和3D预览的定制服装设计小程序。技术：React、Fabric.js、Three.js、Uniapp、Node.js。",
+      "highlights": ["架构双渲染设计编辑器，包含图层管理、图案/字体/绘图工具和撤销/重做历史，并通过渲染抽象层将UI逻辑与Fabric.js、Three.js内部实现解耦。", "通过Three.js Decal Geometry将用户设计投影到glTF服装模型，实现实时3D预览。", "构建基于Node.js的服务端渲染流程，导出高分辨率可打印设计资产。"],
+      "keywords": ["React.js", "Fabric.js", "Three.js", "Uniapp", "Node.js", "微信小程序"], "startDate": "2021-09-15", "endDate": "2023-02-15", "roles": ["前端负责人"], "entity": "Tootools", "type": "应用"
     },
     {
-      "name": "华为活动迷你网站",
-      "description": "为华为活动开发多个互动营销迷你网站，专注于移动优先体验和地图集成。技术：React.js、Canvas、腾讯地图、微信JSSDK、Swiper.js。",
-      "highlights": [
-        "构建基于canvas的互动移动体验，具有手势控制和帧动画，以提高活动参与度。",
-        "扩展Swiper.js，具有自定义卡片折叠和3D翻转过渡，以匹配设计规范。"
-      ],
-      "keywords": [
-        "React.js",
-        "Canvas",
-        "腾讯地图",
-        "微信JSSDK",
-        "Swiper.js",
-        "Material UI"
-      ],
-      "startDate": "2019-08-01",
-      "endDate": "2020-08-01",
-      "roles": [
-        "前端工程师"
-      ],
-      "entity": "华为",
-      "type": "网站"
+      "name": "Fumamx混合应用", "description": "将React Native SaaS应用重建为混合架构。技术：React Native、Vue.js、JS Bridge、iOS、Android。", "highlights": ["设计并实现双向JS Bridge，基于postMessage实现WebView与原生iOS / Android层之间的结构化通信。"], "keywords": ["React Native", "Vue.js", "混合架构", "JS Bridge", "iOS", "Android"], "startDate": "2020-12-01", "endDate": "2021-09-01", "roles": ["前端负责人"], "entity": "Fumamx", "type": "应用"
     },
     {
-      "name": "万豪网站CN本地化",
-      "description": "将万豪的全球网站适配中国市场，替换不支持的第三方服务并确保功能一致性。技术：JavaScript、百度地图SDK。",
-      "highlights": [
-        "使用百度地图SDK重新实现基于Google地图的酒店定位器，保留搜索、过滤和标记功能，以满足中国用户的需求。",
-        "与印度开发团队合作"
-      ],
-      "keywords": [
-        "百度地图",
-        "本地化",
-        "JavaScript",
-        "跨区域协作"
-      ],
-      "startDate": "2019-04-01",
-      "endDate": "2019-08-01",
-      "roles": [
-        "前端工程师"
-      ],
-      "entity": "万豪",
-      "type": "网站"
+      "name": "DS汽车官方网站", "description": "为DS汽车中国开发官方营销网站。技术：JavaScript、CSS动画、百度地图SDK。", "highlights": ["使用CSS和JavaScript构建高保真动画着陆页，具有滚动驱动和进入动画。", "集成百度地图SDK，实现自定义标记、聚类渲染和全国经销商模糊搜索。"], "keywords": ["JavaScript", "百度地图", "CSS动画"], "startDate": "2020-04-01", "endDate": "2020-08-01", "roles": ["前端工程师"], "entity": "DS汽车", "type": "网站"
+    },
+    {
+      "name": "IQOS EDM电子邮件模板", "description": "为IQOS营销活动交付响应式EDM电子邮件模板。技术：MJML、Gulp.js、Litmus。", "highlights": ["使用MJML构建响应式跨客户端电子邮件模板，通过Litmus在15个以上的电子邮件客户端中验证。", "使用Gulp构建工作流自动化电子邮件编译和资产内联。"], "keywords": ["MJML", "Gulp.js", "Litmus"], "startDate": "2020-04-01", "endDate": "2020-05-01", "roles": ["前端工程师"], "entity": "IQOS", "type": "应用"
+    },
+    {
+      "name": "华为活动迷你网站", "description": "为华为活动开发多个互动营销迷你网站。技术：React.js、Canvas、腾讯地图、微信JSSDK、Swiper.js。", "highlights": ["构建基于Canvas的互动移动体验，包含手势控制和帧动画。", "扩展Swiper.js，实现自定义卡片折叠和3D翻转过渡。"], "keywords": ["React.js", "Canvas", "腾讯地图", "微信JSSDK", "Swiper.js"], "startDate": "2019-08-01", "endDate": "2020-08-01", "roles": ["前端工程师"], "entity": "华为", "type": "网站"
+    },
+    {
+      "name": "万豪网站CN本地化", "description": "将万豪全球网站适配中国市场。技术：JavaScript、百度地图SDK。", "highlights": ["使用百度地图SDK重新实现基于Google Maps的酒店定位器，保留搜索、筛选和Marker能力。", "与印度开发团队协作完成中国市场本地化交付。"], "keywords": ["百度地图", "本地化", "JavaScript", "跨区域协作"], "startDate": "2019-04-01", "endDate": "2019-08-01", "roles": ["前端工程师"], "entity": "万豪", "type": "网站"
     }
   ],
-  "awards": [],
-  "publications": [],
-  "languages": [
-    {
-      "language": "普通话",
-      "fluency": "母语"
-    },
-    {
-      "language": "英语",
-      "fluency": "专业工作能力"
-    }
-  ],
-  "interests": [
-    {
-      "name": "工程",
-      "keywords": [
-        "系统设计",
-        "前端架构",
-        "开发者生产力",
-        "创新",
-        "实验"
-      ]
-    },
-    {
-      "name": "爱好",
-      "keywords": [
-        "旅行",
-        "健身",
-        "音乐",
-        "摄影",
-        "书法"
-      ]
-    }
-  ],
+  "awards": [], "publications": [],
+  "languages": [{"language": "普通话", "fluency": "母语"}, {"language": "英语", "fluency": "专业工作能力"}],
+  "interests": [{"name": "工程", "keywords": ["系统设计", "前端架构", "开发者生产力", "AI工程", "创新", "实验"]}, {"name": "爱好", "keywords": ["旅行", "健身", "音乐", "摄影", "书法"]}],
   "references": [],
-  "meta": {
-    "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
-    "version": "v1.0.0",
-    "lastModified": "2026-02-28T10:58:15"
-  }
+  "meta": {"canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json", "version": "v1.0.0", "lastModified": "2026-09-03T10:23:00+08:00"}
 }
