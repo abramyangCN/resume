@@ -49,6 +49,11 @@ jobs:
           cp resume.html dist/index.html
           cp resume.zh.html dist/zh/index.html
 
+      - name: Inject A4 print styles
+        run: |
+          node scripts/inject-print-styles.js resume.html
+          node scripts/inject-print-styles.js resume.zh.html
+
       - name: Generate English and Chinese PDFs
         run: |
           mkdir -p artifacts
