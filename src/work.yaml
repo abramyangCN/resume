@@ -4,10 +4,10 @@
   startDate: "2023-05-01"
   url: "https://www.trajectry.com"
   highlights:
-    - "Owned frontend architecture and delivery across complex React and TypeScript products, spanning real-time systems, cross-platform applications, SSR websites, headless CMS, and AI-enabled experiences."
-    - "Designed frontend architecture for Christie's products including real-time communication, multi-account permissions, cross-platform monorepo structure, reusable component systems, and type-safe API integration."
+    - "Owned frontend architecture and delivery across complex web and cross-platform products, spanning real-time systems, cross-platform applications, SSR websites, CMS, and AI-enabled experiences."
+    - "Designed frontend architecture for Christie's products including real-time communication, multi-account permissions, cross-platform monorepo structure, reusable component systems, and OpenAPI-based API integration."
     - "Built and orchestrated Dify-based RAG workflows for a Richemont knowledge application, owning workflow and node logic as well as the custom frontend experience."
-    - "Applied an AI-first development workflow on Kallista, combining Figma MCP and OpenAPI/Orval-generated contracts to provide structured context for LLM implementation while owning business logic, architecture boundaries, and review."
+    - "Applied an AI-first development workflow on Kallista, combining Figma MCP and OpenAPI/Orval-generated API definitions to provide structured context for LLM implementation while owning business logic, architecture boundaries, and code review."
     - "Delivered products for global luxury and premium brands including Christie's, Richemont, Hermès, Kallista, Messika, Bucherer, Bulgari, and Monotype."
 
 - name: Shanghai RJY Information Technology Co., Ltd
@@ -17,7 +17,7 @@
   endDate: "2023-02-15"
   highlights:
     - "Designed and implemented a customizable clothing platform with real-time 2D/3D rendering using React, Fabric.js, and Three.js."
-    - "Led frontend architecture and delivery for DIY clothing application and WeChat Miniprogram, managed agile teams and built CI/CD infrastructure."
+    - "Led frontend architecture and delivery for a DIY clothing application and WeChat Miniprogram, managed agile teams, and built CI/CD infrastructure."
     - "Developed a Node.js headless rendering service to generate print-ready high-resolution output from user designs, enabling offline export without client-side rendering constraints."
 
 - name: Shanghai Fumasoft Co., Ltd
@@ -28,7 +28,7 @@
   endDate: "2021-09-01"
   highlights:
     - "Refactored a React Native app into a WebView-based hybrid architecture, enabling a shared codebase across iOS, Android, and H5."
-    - "Led a cross-functional team of 5 engineers (FE, iOS, Android) coordinating sprint planning and technical decisions."
+    - "Led a cross-functional team of 5 engineers (FE, iOS, Android), coordinating sprint planning and technical decisions."
 
 - name: Publicis Sapient
   location: "Shanghai, China"
@@ -38,4 +38,4 @@
   endDate: "2020-11-30"
   highlights:
     - "Developed responsive campaign websites and minisites for Huawei, Marriott, and automotive brands."
-    - "Collaborated across Singapore, Japan, and India teams in distributed delivery model."
+    - "Collaborated across Singapore, Japan, and India teams in a distributed delivery model."
