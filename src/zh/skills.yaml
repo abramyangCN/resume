@@ -1,0 +1,11 @@
+- name: Web与前端架构
+  keywords: [React, TypeScript, Next.js, Astro, Vue, SSR, 组件架构, 跨平台架构, 小程序]
+
+- name: 工程化与后端
+  keywords: [Node.js, WebSocket, REST APIs, OpenAPI, Orval, pnpm Workspaces, Monorepo, CI/CD, Docker, Strapi]
+
+- name: AI工程
+  keywords: [Dify, RAG Workflow, LLM Workflow编排, AI-first Development, Figma MCP, Claude Code, GitHub Copilot, Context Engineering]
+
+- name: 可视化与复杂交互
+  keywords: [Fabric.js, Three.js, WebGL, Canvas, 交互编辑系统]
