@@ -85,45 +85,47 @@ pnpm run export   # export to resume.html
 
 ## Summary
 
-Senior Frontend Engineer with 7+ years in React and Mini Program ecosystems. Applies AI-driven workflows to accelerate development cycles and improve engineering architecture. Experienced in canvas-based 2D interaction systems and Three.js-powered 3D rendering development. Collaborates across APAC markets and leads a cross-platform engineering team.
+Senior Frontend Engineer / Frontend Lead with 7+ years of experience delivering complex web and cross-platform products and contributing to architecture across complex business applications. Experienced in independently owning React.js frontend architecture, technical decisions, engineering systems, real-time applications, SSR, Node.js services, and 0-to-1 product delivery. Hands-on with AI product development, including Dify-based RAG workflows, workflow orchestration, custom AI frontends, and AI-first engineering practices using Figma MCP and OpenAPI-driven tooling. Previously led cross-functional frontend teams and delivered products across APAC markets.
 
 ## Experience
 
 ### Senior Frontend Engineer · Trajectry (formerly EY Fabernovel China)
 *May 2023 – Present · Shanghai, China*
 
-- Architected and delivered production-grade WeChat and WeCom Mini Program using Taro, React, Weapp-tailwindcss and TypeScript.
-- Designed and integrated AI-driven customer support and multilingual translation services into production systems.
-- Served global luxury and premium brands including Christie's, Hermès, Kallista, Messika, Bucherer, Bulgari, etc.
+- Owned frontend architecture and delivery across complex web and cross-platform products, spanning real-time systems, cross-platform applications, SSR websites, CMS, and AI-enabled experiences.
+- Designed frontend architecture for Christie's products including real-time communication, multi-account permissions, cross-platform monorepo structure, reusable component systems, and OpenAPI-based API integration.
+- Built and orchestrated Dify-based RAG workflows for a Richemont knowledge application, owning workflow and node logic as well as the custom frontend experience.
+- Applied an AI-first development workflow on Kallista, combining Figma MCP and OpenAPI/Orval-generated API definitions to provide structured context for LLM implementation while owning business logic, architecture boundaries, and code review.
+- Delivered products for global luxury and premium brands including Christie's, Richemont, Hermès, Kallista, Messika, Bucherer, Bulgari, and Monotype.
 
 ### Frontend Lead · Shanghai RJY Information Technology Co., Ltd
 *Sep 2021 – Feb 2023 · Shanghai, China*
 
 - Designed and implemented a customizable clothing platform with real-time 2D/3D rendering using React, Fabric.js, and Three.js.
-- Led frontend architecture and delivery for DIY clothing application and WeChat Miniprogram, managed agile teams and built CI/CD infrastructure.
+- Led frontend architecture and delivery for a DIY clothing application and WeChat Miniprogram, managed agile teams, and built CI/CD infrastructure.
 - Developed a Node.js headless rendering service to generate print-ready high-resolution output from user designs, enabling offline export without client-side rendering constraints.
 
 ### Senior Frontend Engineer · Shanghai Fumasoft Co., Ltd
 *Dec 2020 – Sep 2021 · Shanghai, China*
 
 - Refactored a React Native app into a WebView-based hybrid architecture, enabling a shared codebase across iOS, Android, and H5.
-- Led a cross-functional team of 5 engineers (FE, iOS, Android) coordinating sprint planning and technical decisions.
+- Led a cross-functional team of 5 engineers (FE, iOS, Android), coordinating sprint planning and technical decisions.
 
 ### Frontend Engineer · Publicis Sapient
 *Apr 2019 – Nov 2020 · Shanghai, China*
 
 - Developed responsive campaign websites and minisites for Huawei, Marriott, and automotive brands.
-- Collaborated across Singapore, Japan, and India teams in distributed delivery model.
+- Collaborated across Singapore, Japan, and India teams in a distributed delivery model.
 
 ## Skills
 
-**Frontend:** React, TypeScript, Vue, TailwindCSS, Hybrid Architecture, Mini Program
+**Web & Frontend Architecture:** React, TypeScript, Next.js, Astro, Vue, SSR, Component Architecture, Cross-platform Architecture, Mini Program
 
-**AI-assisted Development:** Claude Code, GitHub Copilot, Prompt Engineering, LLM Workflow Optimization
+**Engineering & Backend:** Node.js, WebSocket, REST APIs, OpenAPI, Orval, pnpm Workspaces, Monorepo, CI/CD, Docker, Strapi
 
-**Rendering & Visualization:** Fabric.js, Three.js, WebGL, Interactive Editing Systems
+**AI Engineering:** Dify, RAG Workflow, LLM Workflow Orchestration, AI-first Development, Figma MCP, Claude Code, GitHub Copilot, Context Engineering
 
-**Backend & Infrastructure:** Node.js, REST APIs, CI/CD, Docker, Cloud Deployment
+**Visualization & Complex Interaction:** Fabric.js, Three.js, WebGL, Canvas, Interactive Editing Systems
 
 ## Education
 
@@ -135,4 +137,4 @@ Senior Frontend Engineer with 7+ years in React and Mini Program ecosystems. App
 
 ---
 
-*Generated automatically from [resume.json](./resume.json) · Last updated: 2026-02-28*
+*Generated automatically from [resume.json](./resume.json) · Last updated: 2026-09-03*
