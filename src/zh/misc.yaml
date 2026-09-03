@@ -22,8 +22,7 @@ languages:
     fluency: 专业工作能力
 
 interests:
-  - name: 爱好
-    keywords: [旅行, 健身, 音乐, 摄影, 骑行]
+  - keywords: [旅行, 健身, 音乐, 摄影, 骑行]
 
 volunteer: []
 publications: []
