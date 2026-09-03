@@ -71,7 +71,6 @@ jobs:
 
       - name: Export resume to HTML
         run: |
-          REPO_NAME="${GITHUB_REPOSITORY##*/}"
           pnpm exec resume export resume.html
           cp resume.json resume.json.bak
           cp resume.zh.json resume.json
@@ -80,8 +79,26 @@ jobs:
           mkdir -p dist/zh
           cp resume.html dist/index.html
           cp resume.zh.html dist/zh/index.html
-          node scripts/inject-lang-switcher.js dist/index.html en zh /${REPO_NAME}/zh/
-          node scripts/inject-lang-switcher.js dist/zh/index.html zh en /${REPO_NAME}/
+
+      - name: Inject A4 print styles
+        run: |
+          node scripts/inject-print-styles.js resume.html
+          node scripts/inject-print-styles.js resume.zh.html
+
+      - name: Generate deployable PDFs
+        run: |
+          mkdir -p artifacts
+          pnpm dlx playwright install --with-deps chromium
+          pnpm dlx playwright pdf --paper-format A4 "file://${PWD}/resume.html" artifacts/resume.en.pdf
+          pnpm dlx playwright pdf --paper-format A4 "file://${PWD}/resume.zh.html" artifacts/resume.zh.pdf
+          cp artifacts/resume.en.pdf dist/resume.pdf
+          cp artifacts/resume.zh.pdf dist/zh/resume.pdf
+
+      - name: Inject web controls
+        run: |
+          REPO_NAME="${GITHUB_REPOSITORY##*/}"
+          node scripts/inject-lang-switcher.js dist/index.html en zh /${REPO_NAME}/zh/ /${REPO_NAME}/resume.pdf
+          node scripts/inject-lang-switcher.js dist/zh/index.html zh en /${REPO_NAME}/ /${REPO_NAME}/zh/resume.pdf
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
