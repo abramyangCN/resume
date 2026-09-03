@@ -22,10 +22,8 @@ languages:
     fluency: 专业工作能力
 
 interests:
-  - name: 工程
-    keywords: [系统设计, 前端架构, 开发者生产力, 创新, 实验]
   - name: 爱好
-    keywords: [旅行, 健身, 音乐, 摄影, 书法]
+    keywords: [旅行, 健身, 音乐, 摄影, 骑行]
 
 volunteer: []
 publications: []
