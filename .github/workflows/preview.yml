@@ -60,11 +60,13 @@ jobs:
           pnpm dlx playwright install --with-deps chromium
           pnpm dlx playwright pdf --paper-format A4 "file://${PWD}/resume.html" artifacts/resume.en.pdf
           pnpm dlx playwright pdf --paper-format A4 "file://${PWD}/resume.zh.html" artifacts/resume.zh.pdf
+          cp artifacts/resume.en.pdf dist/resume.pdf
+          cp artifacts/resume.zh.pdf dist/zh/resume.pdf
 
-      - name: Inject language switcher into web preview
+      - name: Inject web controls
         run: |
-          node scripts/inject-lang-switcher.js dist/index.html en zh ./zh/
-          node scripts/inject-lang-switcher.js dist/zh/index.html zh en ../
+          node scripts/inject-lang-switcher.js dist/index.html en zh ./zh/ ./resume.pdf
+          node scripts/inject-lang-switcher.js dist/zh/index.html zh en ../ ./resume.pdf
 
       - name: Resolve preview path
         id: preview
